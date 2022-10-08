@@ -20,25 +20,32 @@ class RootPage extends StatelessWidget {
       builder: (context, child, animation) {
         final tabsRouter = AutoTabsRouter.of(context);
         return Scaffold(
-          drawer: const MenuPage(),
-          appBar: buildAppBar(context, tabsRouter),
-          floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-          floatingActionButton: buildFloatingActionButton(context),
-          bottomNavigationBar: buildBottomNavigationBar(context, tabsRouter),
-          backgroundColor: Styles.primaryColor,
-          body: ClipRRect(
-            borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(35),
-                topRight: Radius.circular(35),
-                bottomLeft: Radius.circular(35),
-                bottomRight: Radius.circular(35)),
-            child: Scaffold(
-              backgroundColor: Colors.white,
-              body: child,
-            ),
-          ),
+            drawer: const MenuPage(),
+            appBar: buildAppBar(context, tabsRouter),
+            floatingActionButtonLocation: FloatingActionButtonLocation
+                .centerDocked,
+            floatingActionButton: buildFloatingActionButton(context),
+            bottomNavigationBar: buildBottomNavigationBar(context, tabsRouter),
+            backgroundColor: Colors.white,
+            body: Scaffold(
+                backgroundColor: Styles.primaryColor,
+                body: ClipRRect(
+                    borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(35),
+                        topRight: Radius.circular(35),
+                        bottomLeft: Radius.circular(35),
+                        bottomRight: Radius.circular(35)),
+                    child: Scaffold(
+                      backgroundColor: Colors.white,
+                      body: FadeTransition(
+                        opacity: animation,
+                        child: child,
+                      ),
+                    )
+                )
+            )
         );
-      },
+      }
     );
   }
 
