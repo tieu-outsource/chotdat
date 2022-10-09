@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:badges/badges.dart';
 import 'package:chotdat/widgets/named_card.dart';
 import 'package:chotdat/widgets/plan_item.dart';
@@ -7,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../color.dart';
+import '../routes/app_router.gr.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -16,7 +18,10 @@ class HomePage extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.all(10),
       children: [
-        const SearchBar(),
+        const Padding(
+          padding: EdgeInsets.only(right: 15, left: 15, top: 5, bottom: 10),
+          child: SearchBar()
+        ),
         buildStorage(context),
         buildTools(context),
         buildPlans(context),
@@ -33,15 +38,20 @@ class HomePage extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Column(
-            children: const [
-              CircleAvatar(
-                backgroundImage: AssetImage('images/me.png'),
-                radius: 40,
-              ),
-              Padding(padding: EdgeInsets.only(top: 10)),
-              Text('Của tôi')
-            ],
+          GestureDetector(
+            onTap: () {
+              context.navigateTo(const UserDetailRoute());
+            },
+            child: Column(
+              children: const [
+                CircleAvatar(
+                  backgroundImage: AssetImage('images/me.png'),
+                  radius: 40,
+                ),
+                Padding(padding: EdgeInsets.only(top: 10)),
+                Text('Của tôi')
+              ],
+            ),
           ),
           Column(
             children: [

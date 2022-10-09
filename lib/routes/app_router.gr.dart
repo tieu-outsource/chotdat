@@ -11,77 +11,108 @@
 // ignore_for_file: type=lint
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i6;
-import 'package:flutter/material.dart' as _i7;
+import 'package:auto_route/auto_route.dart' as _i8;
+import 'package:flutter/material.dart' as _i9;
 
 import '../pages/chat_page.dart' as _i3;
-import '../pages/home_page.dart' as _i2;
+import '../pages/home_page.dart' as _i7;
 import '../pages/notification_page.dart' as _i4;
+import '../pages/user_detail_page.dart' as _i6;
 import '../pages/user_page.dart' as _i5;
 import '../root_page.dart' as _i1;
+import 'empty_router_page.dart' as _i2;
 
-class AppRouter extends _i6.RootStackRouter {
-  AppRouter([_i7.GlobalKey<_i7.NavigatorState>? navigatorKey])
+class AppRouter extends _i8.RootStackRouter {
+  AppRouter([_i9.GlobalKey<_i9.NavigatorState>? navigatorKey])
       : super(navigatorKey);
 
   @override
-  final Map<String, _i6.PageFactory> pagesMap = {
+  final Map<String, _i8.PageFactory> pagesMap = {
     RootRoute.name: (routeData) {
-      return _i6.MaterialPageX<dynamic>(
+      return _i8.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i1.RootPage(),
       );
     },
-    HomeRoute.name: (routeData) {
-      return _i6.MaterialPageX<dynamic>(
+    HomeRouter.name: (routeData) {
+      return _i8.MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const _i2.HomePage(),
+        child: const _i2.EmptyRouterPage(),
       );
     },
     ChatRoute.name: (routeData) {
-      return _i6.MaterialPageX<dynamic>(
+      return _i8.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i3.ChatPage(),
       );
     },
     NotificationRoute.name: (routeData) {
-      return _i6.MaterialPageX<dynamic>(
+      return _i8.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i4.NotificationPage(),
       );
     },
     UserRoute.name: (routeData) {
-      return _i6.MaterialPageX<dynamic>(
+      return _i8.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i5.UserPage(),
+      );
+    },
+    UserDetailRoute.name: (routeData) {
+      return _i8.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i6.UserDetailPage(),
+      );
+    },
+    HomeRoute.name: (routeData) {
+      return _i8.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i7.HomePage(),
       );
     },
   };
 
   @override
-  List<_i6.RouteConfig> get routes => [
-        _i6.RouteConfig(
+  List<_i8.RouteConfig> get routes => [
+        _i8.RouteConfig(
           RootRoute.name,
           path: '/',
           children: [
-            _i6.RouteConfig(
-              HomeRoute.name,
+            _i8.RouteConfig(
+              HomeRouter.name,
               path: 'home',
               parent: RootRoute.name,
+              children: [
+                _i8.RouteConfig(
+                  HomeRoute.name,
+                  path: '',
+                  parent: HomeRouter.name,
+                ),
+                _i8.RouteConfig(
+                  UserDetailRoute.name,
+                  path: 'user-detail',
+                  parent: HomeRouter.name,
+                ),
+              ],
             ),
-            _i6.RouteConfig(
+            _i8.RouteConfig(
               ChatRoute.name,
               path: 'chat',
               parent: RootRoute.name,
             ),
-            _i6.RouteConfig(
+            _i8.RouteConfig(
               NotificationRoute.name,
               path: 'notification',
               parent: RootRoute.name,
             ),
-            _i6.RouteConfig(
+            _i8.RouteConfig(
               UserRoute.name,
               path: 'user',
+              parent: RootRoute.name,
+            ),
+            _i8.RouteConfig(
+              UserDetailRoute.name,
+              path: 'user-detail',
               parent: RootRoute.name,
             ),
           ],
@@ -91,8 +122,8 @@ class AppRouter extends _i6.RootStackRouter {
 
 /// generated route for
 /// [_i1.RootPage]
-class RootRoute extends _i6.PageRouteInfo<void> {
-  const RootRoute({List<_i6.PageRouteInfo>? children})
+class RootRoute extends _i8.PageRouteInfo<void> {
+  const RootRoute({List<_i8.PageRouteInfo>? children})
       : super(
           RootRoute.name,
           path: '/',
@@ -103,20 +134,21 @@ class RootRoute extends _i6.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i2.HomePage]
-class HomeRoute extends _i6.PageRouteInfo<void> {
-  const HomeRoute()
+/// [_i2.EmptyRouterPage]
+class HomeRouter extends _i8.PageRouteInfo<void> {
+  const HomeRouter({List<_i8.PageRouteInfo>? children})
       : super(
-          HomeRoute.name,
+          HomeRouter.name,
           path: 'home',
+          initialChildren: children,
         );
 
-  static const String name = 'HomeRoute';
+  static const String name = 'HomeRouter';
 }
 
 /// generated route for
 /// [_i3.ChatPage]
-class ChatRoute extends _i6.PageRouteInfo<void> {
+class ChatRoute extends _i8.PageRouteInfo<void> {
   const ChatRoute()
       : super(
           ChatRoute.name,
@@ -128,7 +160,7 @@ class ChatRoute extends _i6.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i4.NotificationPage]
-class NotificationRoute extends _i6.PageRouteInfo<void> {
+class NotificationRoute extends _i8.PageRouteInfo<void> {
   const NotificationRoute()
       : super(
           NotificationRoute.name,
@@ -140,7 +172,7 @@ class NotificationRoute extends _i6.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i5.UserPage]
-class UserRoute extends _i6.PageRouteInfo<void> {
+class UserRoute extends _i8.PageRouteInfo<void> {
   const UserRoute()
       : super(
           UserRoute.name,
@@ -148,4 +180,28 @@ class UserRoute extends _i6.PageRouteInfo<void> {
         );
 
   static const String name = 'UserRoute';
+}
+
+/// generated route for
+/// [_i6.UserDetailPage]
+class UserDetailRoute extends _i8.PageRouteInfo<void> {
+  const UserDetailRoute()
+      : super(
+          UserDetailRoute.name,
+          path: 'user-detail',
+        );
+
+  static const String name = 'UserDetailRoute';
+}
+
+/// generated route for
+/// [_i7.HomePage]
+class HomeRoute extends _i8.PageRouteInfo<void> {
+  const HomeRoute()
+      : super(
+          HomeRoute.name,
+          path: '',
+        );
+
+  static const String name = 'HomeRoute';
 }

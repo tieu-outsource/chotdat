@@ -1,13 +1,12 @@
-// @CupertinoAutoRouter
-// @AdaptiveAutoRouter
-// @CustomAutoRouter
 import 'package:auto_route/annotations.dart';
 import 'package:chotdat/pages/chat_page.dart';
 import 'package:chotdat/pages/home_page.dart';
 import 'package:chotdat/pages/notification_page.dart';
+import 'package:chotdat/pages/user_detail_page.dart';
 import 'package:chotdat/root_page.dart';
-import 'package:chotdat/pages/menu_page.dart';
 import 'package:chotdat/pages/user_page.dart';
+
+import 'empty_router_page.dart';
 
 @MaterialAutoRouter(
   replaceInRouteName: 'Page,Route',
@@ -15,7 +14,18 @@ import 'package:chotdat/pages/user_page.dart';
     AutoRoute(path: "/", page: RootPage, initial: true, children: [
       AutoRoute(
         path: 'home',
-        page: HomePage,
+        name: 'HomeRouter',
+        page: EmptyRouterPage,
+        children: [
+          AutoRoute(
+            path: '',
+            page: HomePage
+          ),
+          AutoRoute(
+            path: 'user-detail',
+            page: UserDetailPage
+          )
+        ]
       ),
       AutoRoute(
         path: 'chat',
@@ -29,6 +39,10 @@ import 'package:chotdat/pages/user_page.dart';
         path: 'user',
         page: UserPage,
       ),
+      AutoRoute(
+        path: 'user-detail',
+        page: UserDetailPage
+      )
     ]),
   ],
 )

@@ -11,46 +11,52 @@ class RootPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AutoTabsRouter(
-      routes: const [
-        HomeRoute(),
-        ChatRoute(),
-        NotificationRoute(),
-        UserRoute(),
-      ],
-      builder: (context, child, animation) {
-        final tabsRouter = AutoTabsRouter.of(context);
-        return Scaffold(
-            drawer: const MenuPage(),
-            appBar: buildAppBar(context, tabsRouter),
-            floatingActionButtonLocation: FloatingActionButtonLocation
-                .centerDocked,
-            floatingActionButton: buildFloatingActionButton(context),
-            bottomNavigationBar: buildBottomNavigationBar(context, tabsRouter),
-            backgroundColor: Colors.white,
-            body: Scaffold(
-                backgroundColor: Styles.primaryColor,
-                body: ClipRRect(
-                    borderRadius: const BorderRadius.only(
-                        topLeft: Radius.circular(35),
-                        topRight: Radius.circular(35),
-                        bottomLeft: Radius.circular(35),
-                        bottomRight: Radius.circular(35)),
-                    child: Scaffold(
-                      backgroundColor: Colors.white,
-                      body: FadeTransition(
-                        opacity: animation,
-                        child: child,
-                      ),
-                    )
-                )
-            )
-        );
-      }
-    );
+        routes: const [
+          HomeRouter(),
+          ChatRoute(),
+          NotificationRoute(),
+          UserRoute(),
+        ],
+        builder: (context, child, animation) {
+          final tabsRouter = AutoTabsRouter.of(context);
+          return Scaffold(
+              drawer: const MenuPage(),
+              appBar: buildAppBar(context, tabsRouter),
+              floatingActionButtonLocation:
+                  FloatingActionButtonLocation.centerDocked,
+              floatingActionButton: buildFloatingActionButton(context),
+              bottomNavigationBar:
+                  buildBottomNavigationBar(context, tabsRouter),
+              backgroundColor: Colors.white,
+              body: Scaffold(
+                  backgroundColor: Styles.primaryColor,
+                  body: ClipRRect(
+                      borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(35),
+                          topRight: Radius.circular(35),
+                          bottomLeft: Radius.circular(35),
+                          bottomRight: Radius.circular(35)),
+                      child: Scaffold(
+                        backgroundColor: Colors.white,
+                        body: FadeTransition(
+                          opacity: animation,
+                          child: child,
+                        ),
+                      ))));
+        });
   }
 
   PreferredSizeWidget buildAppBar(BuildContext context, TabsRouter tabsRouter) {
+    Widget titleWidget = context.topRoute.path == ''
+        ? Image.asset('images/logo.png')
+        : Text(
+            context.topRoute.path,
+            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
+          );
+
     return AppBar(
+      // title: Text(context.topRoute.name),
+      leading: const AutoLeadingButton(),
       elevation: 0,
       // leading: IconButton(
       //   icon: const Icon(Icons.menu_rounded),
@@ -62,7 +68,7 @@ class RootPage extends StatelessWidget {
       // ),
       title: Padding(
         padding: const EdgeInsets.only(bottom: 10),
-        child: Image.asset('images/logo.png'),
+        child: titleWidget,
       ),
     );
   }
@@ -75,8 +81,7 @@ class RootPage extends StatelessWidget {
         child: FloatingActionButton(
           backgroundColor: Colors.white,
           child: Padding(
-            padding:
-            const EdgeInsets.only(bottom: 0),
+            padding: const EdgeInsets.only(bottom: 0),
             child: Image.asset('images/create.png'),
           ),
           onPressed: () {},
@@ -84,7 +89,6 @@ class RootPage extends StatelessWidget {
       ),
     );
   }
-
 
   Widget buildBottomNavigationBar(BuildContext context, TabsRouter tabsRouter) {
     return BottomAppBar(

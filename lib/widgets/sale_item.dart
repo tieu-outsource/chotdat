@@ -53,7 +53,7 @@ class SaleItem extends StatelessWidget {
                           )),
                       Container(
                         padding: const EdgeInsets.only(
-                            top: 7, bottom: 7, right: 5, left: 80),
+                            top: 7, bottom: 7, right: 5, left: 75),
                         child: Column(
                           children: [
                             Row(
