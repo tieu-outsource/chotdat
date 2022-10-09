@@ -19,12 +19,12 @@ class NamedCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 30, left: 5, right: 5, bottom: 10),
+      padding: const EdgeInsets.only(top: 30, bottom: 10),
       child: Stack(
         children: [
           Container(
             padding:
-                const EdgeInsets.only(left: 10, right: 10, bottom: 20, top: 30),
+                const EdgeInsets.only(left: 5, right: 5, bottom: 20, top: 30),
             decoration: BoxDecoration(
               border: Border.all(width: 1, color: Styles.strokeColor),
               borderRadius: const BorderRadius.all(Radius.circular(20)),

@@ -6,4 +6,5 @@ class Styles {
   static const strokeColor = Color(0xffb5b5b5);
   static const violetColor = Color(0xff5C4DB1);
   static const greenColor = Color(0xff389308);
+  static const yellowColor = Color(0xffE0C21D);
 }

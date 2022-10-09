@@ -1,6 +1,7 @@
 import 'package:badges/badges.dart';
 import 'package:chotdat/widgets/named_card.dart';
 import 'package:chotdat/widgets/plan_item.dart';
+import 'package:chotdat/widgets/sale_item.dart';
 import 'package:chotdat/widgets/search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -18,7 +19,8 @@ class HomePage extends StatelessWidget {
         const SearchBar(),
         buildStorage(context),
         buildTools(context),
-        buildPlan(context),
+        buildPlans(context),
+        buildSales(context),
         const SizedBox(height: 100)
       ],
     );
@@ -158,7 +160,7 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget buildPlan(BuildContext context) {
+  Widget buildPlans(BuildContext context) {
     return NamedCard(
         title: 'Lịch làm việc',
         badge: '8',
@@ -168,6 +170,20 @@ class HomePage extends StatelessWidget {
             PlanItem(),
             PlanItem(),
             PlanItem(),
+          ],
+        ));
+  }
+
+  Widget buildSales(BuildContext context) {
+    return NamedCard(
+        title: 'Chốt giao dịch',
+        badge: '5',
+        hasViewMore: true,
+        child: Column(
+          children: const [
+            SaleItem(color: Styles.greenColor, index: 1),
+            SaleItem(color: Colors.black, index: 2),
+            SaleItem(color: Styles.yellowColor, index: 3),
           ],
         ));
   }
