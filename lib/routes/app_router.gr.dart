@@ -12,6 +12,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i8;
+import 'package:auto_route/empty_router_widgets.dart' as _i2;
 import 'package:flutter/material.dart' as _i9;
 
 import '../pages/chat_page.dart' as _i3;
@@ -20,7 +21,6 @@ import '../pages/notification_page.dart' as _i4;
 import '../pages/user_detail_page.dart' as _i6;
 import '../pages/user_page.dart' as _i5;
 import '../root_page.dart' as _i1;
-import 'empty_router_page.dart' as _i2;
 
 class AppRouter extends _i8.RootStackRouter {
   AppRouter([_i9.GlobalKey<_i9.NavigatorState>? navigatorKey])

@@ -212,15 +212,14 @@ class SaleItem extends StatelessWidget {
                         offset: const Offset(-2, -4),
                         child: Container(
                           decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black26,
-                                offset: Offset(1, 0),
-                                blurRadius: 5,
-                              )
-                            ]
-                          ),
+                              shape: BoxShape.circle,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black26,
+                                  offset: Offset(1, 0),
+                                  blurRadius: 5,
+                                )
+                              ]),
                           child: CircleAvatar(
                             radius: 16,
                             backgroundColor: color,

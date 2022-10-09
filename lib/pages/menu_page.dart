@@ -5,17 +5,14 @@ class MenuPage extends StatelessWidget {
   const MenuPage({super.key});
 
   Widget buildList(BuildContext context) {
-    return
-        ListView.builder(
-              padding: const EdgeInsets.only(left: 25, right: 25),
-              itemCount: menuItems.length,
-              itemBuilder: (BuildContext context, int index) => Container(
-                  decoration: const BoxDecoration(
-                    border: Border(bottom: BorderSide(color: Colors.black54)),
-                  ),
-                  child: menuItems[index]
-              )
-        );
+    return ListView.builder(
+        padding: const EdgeInsets.only(left: 25, right: 25),
+        itemCount: menuItems.length,
+        itemBuilder: (BuildContext context, int index) => Container(
+            decoration: const BoxDecoration(
+              border: Border(bottom: BorderSide(color: Colors.black54)),
+            ),
+            child: menuItems[index]));
   }
 
   static const menuItems = <Widget>[
@@ -93,19 +90,19 @@ class MenuPage extends StatelessWidget {
       backgroundColor: Styles.primaryColor,
       appBar: AppBar(
         elevation: 0,
-        title: const Text("Mở rộng", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 26)),
+        title: const Text("Mở rộng",
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 26)),
       ),
       body: ClipRRect(
-        borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(35),
-            topRight: Radius.circular(35),
-            bottomLeft: Radius.circular(35),
-            bottomRight: Radius.circular(35)),
-        child: Scaffold(
-          backgroundColor: Colors.white,
-          body: buildList(context),
-        )
-      ),
+          borderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(35),
+              topRight: Radius.circular(35),
+              bottomLeft: Radius.circular(35),
+              bottomRight: Radius.circular(35)),
+          child: Scaffold(
+            backgroundColor: Colors.white,
+            body: buildList(context),
+          )),
     );
   }
 }

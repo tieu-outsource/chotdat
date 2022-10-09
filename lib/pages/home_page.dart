@@ -19,9 +19,8 @@ class HomePage extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       children: [
         const Padding(
-          padding: EdgeInsets.only(right: 15, left: 15, top: 5, bottom: 10),
-          child: SearchBar()
-        ),
+            padding: EdgeInsets.only(right: 15, left: 15, top: 5, bottom: 10),
+            child: SearchBar()),
         buildStorage(context),
         buildTools(context),
         buildPlans(context),

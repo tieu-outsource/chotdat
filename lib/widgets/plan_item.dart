@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../color.dart';
 
 class PlanItem extends StatelessWidget {
+  const PlanItem({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Padding(
