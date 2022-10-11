@@ -39,6 +39,7 @@ dependencies:
   auto_route: ^5.0.1
   badges: ^2.0.3
   google_fonts: ^2.1.0
+  datepicker_dropdown: ^0.0.7+2
 
 dev_dependencies:
   flutter_test:

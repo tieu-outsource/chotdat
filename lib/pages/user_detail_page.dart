@@ -2,6 +2,7 @@ import 'package:chotdat/widgets/my_button.dart';
 import 'package:chotdat/widgets/my_button_outline.dart';
 import 'package:chotdat/widgets/named_card.dart';
 import 'package:chotdat/widgets/search_bar.dart';
+import 'package:datepicker_dropdown/datepicker_dropdown.dart';
 import 'package:flutter/material.dart';
 
 import '../color.dart';
@@ -14,7 +15,7 @@ class UserDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.all(10),
-      children: [buildStorage()],
+      children: [buildStorage(), buildResult(), SizedBox(height: 100)],
     );
   }
 
@@ -287,5 +288,119 @@ class UserDetailPage extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Widget buildResult() {
+    return NamedCard(
+        title: 'Kết quả làm việc',
+        child: Column(
+          children: [
+            SizedBox(
+                width: 250,
+                height: 50,
+                child: DropdownDatePicker(
+                  inputDecoration: InputDecoration(
+                    contentPadding: EdgeInsets.only(top: 0, bottom: 0),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.grey, width: 1.0),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                  ),
+                  isDropdownHideUnderline: true,
+                  isFormValidator: true,
+                  startYear: 1900,
+                  endYear: 2022,
+                  width: 10,
+                  selectedDay: 14,
+                  selectedMonth: 10,
+                  selectedYear: 2022,
+                  onChangedDay: (value) => print('onChangedDay: $value'),
+                  onChangedMonth: (value) => print('onChangedMonth: $value'),
+                  onChangedYear: (value) => print('onChangedYear: $value'),
+                  showDay: false,
+                )),
+            SizedBox(height: 30),
+            Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Text('Lượt dẫn khách xem BĐS'),
+                    Text('22',
+                        style: TextStyle(
+                            color: Styles.primaryColor,
+                            fontWeight: FontWeight.bold))
+                  ],
+                )),
+            Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Text('BĐS chốt đơn thành công'),
+                    Text('22',
+                        style: TextStyle(
+                            color: Styles.primaryColor,
+                            fontWeight: FontWeight.bold))
+                  ],
+                )),
+            Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Text('Số tiền BĐS chốt đơn thành công:'),
+                    Text('22',
+                        style: TextStyle(
+                            color: Styles.primaryColor,
+                            fontWeight: FontWeight.bold))
+                  ],
+                )),
+            Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Text('Số tiền hoa hồng được hưởng:'),
+                    Text('22.234.000.000',
+                        style: TextStyle(
+                            color: Styles.primaryColor,
+                            fontWeight: FontWeight.bold))
+                  ],
+                )),
+            Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Text('Số tiền chênh lệch được hưởng:'),
+                    Text('1.203.000.000',
+                        style: TextStyle(
+                            color: Styles.primaryColor,
+                            fontWeight: FontWeight.bold))
+                  ],
+                )),
+            Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Text('Số tiền chi để thực hiện giao dịch:'),
+                    Text('234.000.000',
+                        style: TextStyle(
+                            color: Styles.primaryColor,
+                            fontWeight: FontWeight.bold))
+                  ],
+                )),
+          ],
+        ));
   }
 }
