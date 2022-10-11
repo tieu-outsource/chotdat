@@ -7,4 +7,7 @@ class Styles {
   static const violetColor = Color(0xff5C4DB1);
   static const greenColor = Color(0xff389308);
   static const yellowColor = Color(0xffE0C21D);
+  static const blueColor = Color(0xff1b85e0);
+
+  static const textOne = TextStyle(fontSize: 16, color: Color(0xff696969));
 }
