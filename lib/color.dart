@@ -11,6 +11,7 @@ class Styles {
   static const blueColor = Color(0xff1b85e0);
 
   static textOne() => GoogleFonts.openSans(fontSize: 16, color: const Color(0xff696969));
+  static textTwo() => GoogleFonts.montserrat(fontSize: 12, color: const Color(0xff696969));
 
   static headlineOne() => GoogleFonts.openSans(fontSize: 16, color: primaryColor, fontWeight: FontWeight.bold);
 }

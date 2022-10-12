@@ -1,6 +1,7 @@
 import 'package:auto_route/annotations.dart';
 import 'package:auto_route/empty_router_widgets.dart';
 import 'package:chotdat/pages/chat_page.dart';
+import 'package:chotdat/pages/group_detail_page.dart';
 import 'package:chotdat/pages/home_page.dart';
 import 'package:chotdat/pages/notification_page.dart';
 import 'package:chotdat/pages/user_detail_page.dart';
@@ -17,7 +18,8 @@ import 'package:chotdat/pages/account_page.dart';
           page: EmptyRouterPage,
           children: [
             AutoRoute(path: '', page: HomePage),
-            AutoRoute(path: 'user-detail', page: UserDetailPage)
+            AutoRoute(path: 'user-detail', page: UserDetailPage),
+            AutoRoute(path: 'group-detail', page: GroupDetailPage),
           ]),
       AutoRoute(
         path: 'chat',

@@ -52,21 +52,24 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
-          Column(
-            children: [
-              Badge(
-                badgeContent: Text('3',
-                    style:
-                        GoogleFonts.ubuntu(fontSize: 16, color: Colors.white)),
-                position: BadgePosition.topEnd(end: 4),
-                child: const CircleAvatar(
-                  backgroundImage: AssetImage('images/group.png'),
-                  radius: 40,
+          GestureDetector(
+            onTap: () => context.navigateTo(const GroupDetailRoute()),
+            child: Column(
+              children: [
+                Badge(
+                  badgeContent: Text('3',
+                      style: GoogleFonts.ubuntu(
+                          fontSize: 16, color: Colors.white)),
+                  position: BadgePosition.topEnd(end: 4),
+                  child: const CircleAvatar(
+                    backgroundImage: AssetImage('images/group.png'),
+                    radius: 40,
+                  ),
                 ),
-              ),
-              const Padding(padding: EdgeInsets.only(top: 10)),
-              const Text('Nhóm 1')
-            ],
+                const Padding(padding: EdgeInsets.only(top: 10)),
+                const Text('Nhóm 1')
+              ],
+            ),
           ),
           Column(
             children: [
@@ -175,7 +178,7 @@ class HomePage extends StatelessWidget {
         badge: '8',
         hasViewMore: true,
         child: Column(
-          children: [
+          children: const [
             PlanItem(),
             PlanItem(),
             PlanItem(),
