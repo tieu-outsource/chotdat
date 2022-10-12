@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Styles {
   static const primaryColor = Color(0xffF42649);
@@ -9,5 +10,7 @@ class Styles {
   static const yellowColor = Color(0xffE0C21D);
   static const blueColor = Color(0xff1b85e0);
 
-  static const textOne = TextStyle(fontSize: 16, color: Color(0xff696969));
+  static textOne() => GoogleFonts.openSans(fontSize: 16, color: const Color(0xff696969));
+
+  static headlineOne() => GoogleFonts.openSans(fontSize: 16, color: primaryColor, fontWeight: FontWeight.bold);
 }

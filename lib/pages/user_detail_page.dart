@@ -52,8 +52,8 @@ class UserDetailPage extends StatelessWidget {
                 padding: const EdgeInsets.only(
                     top: 20, bottom: 20, left: 10, right: 10),
                 child: Column(
-                  children: const [
-                    CircleAvatar(
+                  children: [
+                    const CircleAvatar(
                       backgroundImage: AssetImage('images/bubble.png'),
                       radius: 55,
                       child: Text('5',
@@ -62,8 +62,8 @@ class UserDetailPage extends StatelessWidget {
                               color: Colors.white,
                               fontWeight: FontWeight.bold)),
                     ),
-                    SizedBox(height: 10),
-                    Text('Bất động sản', style: Styles.textOne)
+                    const SizedBox(height: 10),
+                    Text('Bất động sản', style: Styles.textOne())
                   ],
                 ),
               ),
@@ -96,7 +96,7 @@ class UserDetailPage extends StatelessWidget {
                                             fontSize: 12)),
                                   ),
                                   const SizedBox(width: 5),
-                                  const Text('Thổ cư', style: Styles.textOne)
+                                  Text('Thổ cư', style: Styles.textOne())
                                 ],
                               ),
                               const SizedBox(height: 10),
@@ -116,7 +116,7 @@ class UserDetailPage extends StatelessWidget {
                                             fontSize: 12)),
                                   ),
                                   const SizedBox(width: 5),
-                                  const Text('Chung cư', style: Styles.textOne)
+                                  Text('Chung cư', style: Styles.textOne())
                                 ],
                               ),
                             ],
@@ -142,7 +142,7 @@ class UserDetailPage extends StatelessWidget {
                                           fontSize: 12)),
                                 ),
                                 const SizedBox(width: 5),
-                                const Text('Cho thuê', style: Styles.textOne)
+                                Text('Cho thuê', style: Styles.textOne())
                               ],
                             ),
                             const SizedBox(height: 10),
@@ -162,7 +162,7 @@ class UserDetailPage extends StatelessWidget {
                                           fontSize: 12)),
                                 ),
                                 const SizedBox(width: 5),
-                                const Text('Dự án', style: Styles.textOne)
+                                Text('Dự án', style: Styles.textOne())
                               ],
                             ),
                           ],
@@ -192,7 +192,7 @@ class UserDetailPage extends StatelessWidget {
                                             fontSize: 12, color: Colors.white)),
                                   ),
                                   const SizedBox(width: 5),
-                                  const Text('Trống', style: Styles.textOne)
+                                  Text('Trống', style: Styles.textOne())
                                 ],
                               ),
                               const SizedBox(height: 10),
@@ -210,8 +210,7 @@ class UserDetailPage extends StatelessWidget {
                                             color: Colors.white, fontSize: 12)),
                                   ),
                                   const SizedBox(width: 5),
-                                  const Text('Thương lượng',
-                                      style: Styles.textOne)
+                                  Text('Thương lượng', style: Styles.textOne())
                                 ],
                               ),
                             ],
@@ -224,10 +223,10 @@ class UserDetailPage extends StatelessWidget {
                             Row(
                               children: [
                                 Container(
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                       color: Styles.primaryColor,
-                                      borderRadius: const BorderRadius.all(
-                                          Radius.circular(5))),
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(5))),
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 10, vertical: 2),
                                   child: const Text('2',
@@ -235,7 +234,7 @@ class UserDetailPage extends StatelessWidget {
                                           color: Colors.white, fontSize: 12)),
                                 ),
                                 const SizedBox(width: 5),
-                                const Text('Đặt cọc', style: Styles.textOne)
+                                Text('Đặt cọc', style: Styles.textOne())
                               ],
                             ),
                             const SizedBox(height: 10),
@@ -255,7 +254,7 @@ class UserDetailPage extends StatelessWidget {
                                           fontSize: 12)),
                                 ),
                                 const SizedBox(width: 5),
-                                const Text('Đóng', style: Styles.textOne)
+                                Text('Đóng', style: Styles.textOne())
                               ],
                             ),
                           ],
@@ -321,7 +320,7 @@ class UserDetailPage extends StatelessWidget {
                   onChangedYear: (value) => print('onChangedYear: $value'),
                   showDay: false,
                 )),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 5, vertical: 10),

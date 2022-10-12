@@ -5,7 +5,7 @@ import 'package:chotdat/pages/home_page.dart';
 import 'package:chotdat/pages/notification_page.dart';
 import 'package:chotdat/pages/user_detail_page.dart';
 import 'package:chotdat/root_page.dart';
-import 'package:chotdat/pages/user_page.dart';
+import 'package:chotdat/pages/account_page.dart';
 
 @MaterialAutoRouter(
   replaceInRouteName: 'Page,Route',
@@ -29,7 +29,7 @@ import 'package:chotdat/pages/user_page.dart';
       ),
       AutoRoute(
         path: 'user',
-        page: UserPage,
+        page: AccountPage,
       ),
       AutoRoute(path: 'user-detail', page: UserDetailPage)
     ]),

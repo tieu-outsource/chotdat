@@ -15,11 +15,11 @@ import 'package:auto_route/auto_route.dart' as _i8;
 import 'package:auto_route/empty_router_widgets.dart' as _i2;
 import 'package:flutter/material.dart' as _i9;
 
+import '../pages/account_page.dart' as _i5;
 import '../pages/chat_page.dart' as _i3;
 import '../pages/home_page.dart' as _i7;
 import '../pages/notification_page.dart' as _i4;
 import '../pages/user_detail_page.dart' as _i6;
-import '../pages/user_page.dart' as _i5;
 import '../root_page.dart' as _i1;
 
 class AppRouter extends _i8.RootStackRouter {
@@ -52,10 +52,10 @@ class AppRouter extends _i8.RootStackRouter {
         child: const _i4.NotificationPage(),
       );
     },
-    UserRoute.name: (routeData) {
+    AccountRoute.name: (routeData) {
       return _i8.MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const _i5.UserPage(),
+        child: const _i5.AccountPage(),
       );
     },
     UserDetailRoute.name: (routeData) {
@@ -106,7 +106,7 @@ class AppRouter extends _i8.RootStackRouter {
               parent: RootRoute.name,
             ),
             _i8.RouteConfig(
-              UserRoute.name,
+              AccountRoute.name,
               path: 'user',
               parent: RootRoute.name,
             ),
@@ -171,15 +171,15 @@ class NotificationRoute extends _i8.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i5.UserPage]
-class UserRoute extends _i8.PageRouteInfo<void> {
-  const UserRoute()
+/// [_i5.AccountPage]
+class AccountRoute extends _i8.PageRouteInfo<void> {
+  const AccountRoute()
       : super(
-          UserRoute.name,
+          AccountRoute.name,
           path: 'user',
         );
 
-  static const String name = 'UserRoute';
+  static const String name = 'AccountRoute';
 }
 
 /// generated route for

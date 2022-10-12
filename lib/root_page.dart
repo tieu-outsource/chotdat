@@ -15,7 +15,7 @@ class RootPage extends StatelessWidget {
           HomeRouter(),
           ChatRoute(),
           NotificationRoute(),
-          UserRoute(),
+          AccountRoute(),
         ],
         builder: (context, child, animation) {
           final tabsRouter = AutoTabsRouter.of(context);
