@@ -56,16 +56,9 @@ class RootPage extends StatelessWidget {
 
     return AppBar(
       // title: Text(context.topRoute.name),
+      centerTitle: true,
       leading: const AutoLeadingButton(),
       elevation: 0,
-      // leading: IconButton(
-      //   icon: const Icon(Icons.menu_rounded),
-      //   onPressed: () {
-      //     context.router.push(RootRoute(
-      //       children: [MenuRoute()]
-      //     ));
-      //   }
-      // ),
       title: Padding(
         padding: const EdgeInsets.only(bottom: 10),
         child: titleWidget,

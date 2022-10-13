@@ -15,11 +15,11 @@ class UserDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.all(10),
-      children: [buildStorage(), buildResult(), SizedBox(height: 100)],
+      children: [buildStorage(context), buildResult(), SizedBox(height: 100)],
     );
   }
 
-  Widget buildStorage() {
+  Widget buildStorage(BuildContext context) {
     return NamedCard(
       hasViewMore: true,
       title: 'Kho hàng',
@@ -50,7 +50,7 @@ class UserDetailPage extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(
-                    top: 20, bottom: 20, left: 10, right: 10),
+                    top: 20, bottom: 20, left: 0, right: 10),
                 child: Column(
                   children: [
                     const CircleAvatar(
@@ -76,7 +76,7 @@ class UserDetailPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         SizedBox(
-                          width: 142,
+                          width: MediaQuery.of(context).size.width / 3,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -122,7 +122,7 @@ class UserDetailPage extends StatelessWidget {
                             ],
                           ),
                         ),
-                        const SizedBox(width: 10),
+                        const SizedBox(width: 5),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -174,7 +174,7 @@ class UserDetailPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         SizedBox(
-                          width: 142,
+                          width: MediaQuery.of(context).size.width / 3,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -216,7 +216,7 @@ class UserDetailPage extends StatelessWidget {
                             ],
                           ),
                         ),
-                        const SizedBox(width: 10),
+                        const SizedBox(width: 5),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [

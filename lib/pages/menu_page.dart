@@ -89,6 +89,7 @@ class MenuPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Styles.primaryColor,
       appBar: AppBar(
+        centerTitle: true,
         elevation: 0,
         title: const Text("Mở rộng",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 26)),

@@ -71,37 +71,43 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
-          Column(
-            children: [
-              Badge(
-                badgeContent: Text('3',
-                    style:
-                        GoogleFonts.ubuntu(fontSize: 16, color: Colors.white)),
-                position: BadgePosition.topEnd(end: 4),
-                child: const CircleAvatar(
-                  backgroundImage: AssetImage('images/group.png'),
-                  radius: 40,
+          GestureDetector(
+            onTap: () => context.navigateTo(const GroupDetailRoute()),
+            child: Column(
+              children: [
+                Badge(
+                  badgeContent: Text('3',
+                      style: GoogleFonts.ubuntu(
+                          fontSize: 16, color: Colors.white)),
+                  position: BadgePosition.topEnd(end: 4),
+                  child: const CircleAvatar(
+                    backgroundImage: AssetImage('images/group.png'),
+                    radius: 40,
+                  ),
                 ),
-              ),
-              const Padding(padding: EdgeInsets.only(top: 10)),
-              const Text('Nhóm 2')
-            ],
+                const Padding(padding: EdgeInsets.only(top: 10)),
+                const Text('Nhóm 2')
+              ],
+            ),
           ),
-          Column(
-            children: [
-              Badge(
-                badgeContent: Text('3',
-                    style:
-                        GoogleFonts.ubuntu(fontSize: 16, color: Colors.white)),
-                position: BadgePosition.topEnd(end: 4),
-                child: const CircleAvatar(
-                  backgroundImage: AssetImage('images/group.png'),
-                  radius: 40,
+          GestureDetector(
+            onTap: () => context.navigateTo(const GroupDetailRoute()),
+            child: Column(
+              children: [
+                Badge(
+                  badgeContent: Text('3',
+                      style: GoogleFonts.ubuntu(
+                          fontSize: 16, color: Colors.white)),
+                  position: BadgePosition.topEnd(end: 4),
+                  child: const CircleAvatar(
+                    backgroundImage: AssetImage('images/group.png'),
+                    radius: 40,
+                  ),
                 ),
-              ),
-              const Padding(padding: EdgeInsets.only(top: 10)),
-              const Text('Nhóm 3')
-            ],
+                const Padding(padding: EdgeInsets.only(top: 10)),
+                const Text('Nhóm 3')
+              ],
+            ),
           ),
         ],
       ),
@@ -115,18 +121,23 @@ class HomePage extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Column(
-            children: [
-              Container(
-                width: 80,
-                height: 80,
-                decoration: const BoxDecoration(
-                    shape: BoxShape.circle, color: Styles.violetColor),
-                child: Image.asset('images/growth.png'),
-              ),
-              const Padding(padding: EdgeInsets.only(top: 10)),
-              const Text('Lịch làm việc')
-            ],
+          GestureDetector(
+            onTap: () {
+              context.navigateTo(const TimeTableRoute());
+            },
+            child: Column(
+              children: [
+                Container(
+                  width: 80,
+                  height: 80,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.circle, color: Styles.violetColor),
+                  child: Image.asset('images/growth.png'),
+                ),
+                const Padding(padding: EdgeInsets.only(top: 10)),
+                const Text('Lịch làm việc')
+              ],
+            ),
           ),
           Column(
             children: [

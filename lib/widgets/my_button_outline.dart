@@ -13,7 +13,7 @@ class MyButtonOutline extends StatelessWidget {
         print("Press");
       },
       child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
           decoration: BoxDecoration(
               borderRadius: const BorderRadius.all(Radius.circular(10)),
               border: Border.all(color: Styles.primaryColor),
@@ -27,7 +27,7 @@ class MyButtonOutline extends StatelessWidget {
           child: Text(
             text,
             style: const TextStyle(
-                color: Color(0xff8e8e8e), fontSize: 16, fontWeight: FontWeight.bold),
+                color: Color(0xff8e8e8e), fontSize: 14, fontWeight: FontWeight.bold),
           )),
     );
   }

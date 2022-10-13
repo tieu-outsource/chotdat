@@ -1,3 +1,5 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:chotdat/routes/app_router.gr.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -53,7 +55,7 @@ class SaleItem extends StatelessWidget {
                           )),
                       Container(
                         padding: const EdgeInsets.only(
-                            top: 7, bottom: 7, right: 5, left: 75),
+                            top: 7, bottom: 7, right: 5, left: 65),
                         child: Column(
                           children: [
                             Row(
@@ -64,11 +66,11 @@ class SaleItem extends StatelessWidget {
                                   children: [
                                     Text("Diện tích: 55m2",
                                         style: GoogleFonts.openSans(
-                                            fontSize: 11, color: Colors.black)),
+                                            fontSize: 10, color: Colors.black)),
                                     const SizedBox(height: 5),
                                     Text("Mặt tiền: 8m",
                                         style: GoogleFonts.openSans(
-                                            fontSize: 11, color: Colors.black)),
+                                            fontSize: 10, color: Colors.black)),
                                   ],
                                 ),
                                 Column(
@@ -76,11 +78,11 @@ class SaleItem extends StatelessWidget {
                                   children: [
                                     Text("Xây dựng: 5 tầng",
                                         style: GoogleFonts.openSans(
-                                            fontSize: 11, color: Colors.black)),
+                                            fontSize: 10, color: Colors.black)),
                                     const SizedBox(height: 5),
                                     Text("Pháp lý: sổ đỏ",
                                         style: GoogleFonts.openSans(
-                                            fontSize: 11, color: Colors.black)),
+                                            fontSize: 10, color: Colors.black)),
                                   ],
                                 ),
                                 Column(
@@ -88,11 +90,11 @@ class SaleItem extends StatelessWidget {
                                   children: [
                                     Text("Hướng: Đông Nam",
                                         style: GoogleFonts.openSans(
-                                            fontSize: 11, color: Colors.black)),
+                                            fontSize: 10, color: Colors.black)),
                                     const SizedBox(height: 5),
                                     Text("Kích thước đường: 5m",
                                         style: GoogleFonts.openSans(
-                                            fontSize: 11, color: Colors.black)),
+                                            fontSize: 10, color: Colors.black)),
                                   ],
                                 )
                               ],
@@ -163,10 +165,12 @@ class SaleItem extends StatelessWidget {
                                   ),
                                 ),
                                 GestureDetector(
-                                  onTap: () {},
+                                  onTap: () {
+                                    context.navigateTo(SaleDetailRoute());
+                                  },
                                   child: Text('Chi tiết  ',
                                       style: GoogleFonts.openSans(
-                                          fontSize: 11, color: color)),
+                                          fontSize: 10, color: color)),
                                 )
                               ],
                             )
@@ -182,10 +186,15 @@ class SaleItem extends StatelessWidget {
                 children: [
                   Padding(
                       padding: const EdgeInsets.only(top: 23),
-                      child: SizedBox(
-                        height: 74,
-                        width: 74,
-                        child: Image.asset('images/sale_thumbnail.png'),
+                      child: GestureDetector(
+                        onTap: () {
+                          context.navigateTo(SaleDetailRoute());
+                        },
+                        child: SizedBox(
+                          height: 74,
+                          width: 74,
+                          child: Image.asset('images/sale_thumbnail.png'),
+                        ),
                       )),
                   Stack(
                     children: [
@@ -224,7 +233,7 @@ class SaleItem extends StatelessWidget {
                             radius: 16,
                             backgroundColor: color,
                             child: CircleAvatar(
-                              radius: 11,
+                              radius: 10,
                               backgroundColor: Colors.white,
                               child: Text("$index",
                                   style: const TextStyle(

@@ -13,7 +13,7 @@ class MyButton extends StatelessWidget {
         print("Press");
       },
       child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
           decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(10)),
               color: Styles.primaryColor,
@@ -26,7 +26,7 @@ class MyButton extends StatelessWidget {
           child: Text(
             text,
             style: const TextStyle(
-                color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+                color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold),
           )),
     );
   }

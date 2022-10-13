@@ -8,12 +8,14 @@ class NamedCard extends StatelessWidget {
   final Widget child;
   final String? badge;
   final bool hasViewMore;
+  final double? titleWidth;
 
   const NamedCard(
       {super.key,
       required this.title,
       required this.child,
       this.badge,
+      this.titleWidth,
       this.hasViewMore = false});
 
   @override
@@ -44,7 +46,7 @@ class NamedCard extends StatelessWidget {
           Transform.translate(
             offset: const Offset(-5, -16),
             child: Container(
-              width: 170,
+              width: titleWidth ?? 170,
               decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(10)),
                   color: Styles.primaryColor,
@@ -64,7 +66,7 @@ class NamedCard extends StatelessWidget {
                         title,
                         style: const TextStyle(
                             color: Colors.white,
-                            fontSize: 16,
+                            fontSize: 14,
                             fontWeight: FontWeight.bold),
                       )),
                   if (badge != null)
