@@ -14,18 +14,21 @@ class GroupDetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      padding: const EdgeInsets.all(10),
-      children: [
-        buildTools(context),
-        buildStorage(context),
-        buildNewsUpdate(context),
-        buildNewsBuy(context),
-        buildNotifications(context),
-        buildPlans(context),
-        buildResult(),
-        SizedBox(height: 100)
-      ],
+    return Container(
+      color: Colors.white,
+      child: ListView(
+        padding: const EdgeInsets.all(10),
+        children: [
+          buildTools(context),
+          buildStorage(context),
+          buildNewsUpdate(context),
+          buildNewsBuy(context),
+          buildNotifications(context),
+          buildPlans(context),
+          buildResult(),
+          SizedBox(height: 100)
+        ],
+      ),
     );
   }
 

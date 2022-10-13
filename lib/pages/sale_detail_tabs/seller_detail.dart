@@ -87,7 +87,8 @@ class SellerDetailTab extends StatelessWidget {
                 )
               ],
             ),
-          )
+          ),
+          SizedBox(height: 30)
         ],
       ),
     );

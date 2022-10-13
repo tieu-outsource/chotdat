@@ -56,8 +56,8 @@ class SaleDetailPage extends StatelessWidget {
                   children: [
                     SaleItemDetailTab(),
                     SellerDetailTab(),
-                    Text('ok'),
-                    Text('ok'),
+                    SellerDetailTab(),
+                    SellerDetailTab(),
                   ],
                 ),
               ),

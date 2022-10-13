@@ -47,21 +47,13 @@ class RootPage extends StatelessWidget {
   }
 
   PreferredSizeWidget buildAppBar(BuildContext context, TabsRouter tabsRouter) {
-    Widget titleWidget = context.topRoute.path == ''
-        ? Image.asset('images/logo.png')
-        : Text(
-            context.topRoute.path,
-            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
-          );
-
     return AppBar(
-      // title: Text(context.topRoute.name),
       centerTitle: true,
       leading: const AutoLeadingButton(),
       elevation: 0,
       title: Padding(
         padding: const EdgeInsets.only(bottom: 10),
-        child: titleWidget,
+        child: buildAppTitle(context),
       ),
     );
   }
@@ -141,5 +133,52 @@ class RootPage extends StatelessWidget {
                 )
               ],
             )));
+  }
+
+  Widget buildAppTitle(BuildContext context) {
+    switch (context.topRoute.path) {
+      case '':
+      case 'sale-detail':
+      case 'time-table':
+      case 'compare-price':
+        return Image.asset('images/logo.png');
+      case 'user-detail':
+        return const Text(
+          'Đỗ Bảo Lâm Anh',
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
+        );
+      case 'group-detail':
+        {
+          return Transform.translate(
+            offset: Offset(-20, 5),
+            child: Row(
+              children: [
+                const CircleAvatar(
+                  radius: 17,
+                  backgroundImage: AssetImage('images/group.png'),
+                ),
+                const SizedBox(width: 10),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    Text(
+                      'Nhà phố - Phòng số 7',
+                      style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      'Công khai',
+                      style: TextStyle(fontSize: 14),
+                    ),
+                  ],
+                )
+              ],
+            ),
+          );
+        }
+      default:
+        {
+          return Image.asset('images/logo.png');
+        }
+    }
   }
 }
