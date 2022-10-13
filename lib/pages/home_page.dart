@@ -152,18 +152,23 @@ class HomePage extends StatelessWidget {
               const Text('Quy hoạch')
             ],
           ),
-          Column(
-            children: [
-              Container(
-                width: 80,
-                height: 80,
-                decoration: const BoxDecoration(
-                    shape: BoxShape.circle, color: Styles.violetColor),
-                child: Image.asset('images/auction.png'),
-              ),
-              const Padding(padding: EdgeInsets.only(top: 10)),
-              const Text('So sánh giá')
-            ],
+          GestureDetector(
+            onTap: () {
+              context.navigateTo(const ComparePriceRoute());
+            },
+            child: Column(
+              children: [
+                Container(
+                  width: 80,
+                  height: 80,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.circle, color: Styles.violetColor),
+                  child: Image.asset('images/auction.png'),
+                ),
+                const Padding(padding: EdgeInsets.only(top: 10)),
+                const Text('So sánh giá')
+              ],
+            ),
           ),
           Column(
             children: [

@@ -1,6 +1,7 @@
 import 'package:auto_route/annotations.dart';
 import 'package:auto_route/empty_router_widgets.dart';
 import 'package:chotdat/pages/chat_page.dart';
+import 'package:chotdat/pages/compare_price_page.dart';
 import 'package:chotdat/pages/group_detail_page.dart';
 import 'package:chotdat/pages/home_page.dart';
 import 'package:chotdat/pages/notification_page.dart';
@@ -24,6 +25,7 @@ import 'package:chotdat/pages/account_page.dart';
             AutoRoute(path: 'group-detail', page: GroupDetailPage),
             AutoRoute(path: 'sale-detail', page: SaleDetailPage),
             AutoRoute(path: 'time-table', page: TimeTablePage),
+            AutoRoute(path: 'compare-price', page: ComparePricePage),
           ]),
       AutoRoute(
         path: 'chat',
