@@ -6,6 +6,7 @@ import 'package:datepicker_dropdown/datepicker_dropdown.dart';
 import 'package:flutter/material.dart';
 
 import '../color.dart';
+import '../widgets/my_datepicker.dart';
 import '../widgets/plan_item.dart';
 import '../widgets/sale_item.dart';
 
@@ -148,7 +149,7 @@ class GroupDetailPage extends StatelessWidget {
             children: [
               MyButton(text: 'Thống kê'),
               Padding(
-                padding: const EdgeInsets.only(right: 10),
+                padding: const EdgeInsets.only(right: 0),
                 child: SizedBox(
                   height: 33,
                   width: 33,
@@ -159,234 +160,242 @@ class GroupDetailPage extends StatelessWidget {
               ),
             ],
           ),
+          const SizedBox(height: 10),
           IntrinsicHeight(
               child: Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        top: 20, bottom: 20, left: 0, right: 10),
-                    child: Column(
-                      children: [
-                        const CircleAvatar(
-                          backgroundImage: AssetImage('images/bubble.png'),
-                          radius: 55,
-                          child: Text('5',
-                              style: TextStyle(
-                                  fontSize: 53,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold)),
-                        ),
-                        const SizedBox(height: 10),
-                        Text('Bất động sản', style: Styles.textOne())
-                      ],
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(
+                    top: 20, bottom: 20, left: 0, right: 10),
+                child: Column(
+                  children: [
+                    const CircleAvatar(
+                      backgroundImage: AssetImage('images/bubble.png'),
+                      radius: 55,
+                      child: Text('5',
+                          style: TextStyle(
+                              fontSize: 53,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold)),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 10),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    const SizedBox(height: 10),
+                    Text('Bất động sản', style: Styles.textOne())
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            SizedBox(
-                              width: MediaQuery.of(context).size.width / 3,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width / 3,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
                                 children: [
-                                  Row(
-                                    children: [
-                                      Container(
-                                        decoration: BoxDecoration(
-                                            border: Border.all(
-                                                color: Styles.yellowColor),
-                                            borderRadius: const BorderRadius.all(
-                                                Radius.circular(5))),
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 10, vertical: 2),
-                                        child: const Text('1',
-                                            style: TextStyle(
-                                                color: Styles.yellowColor,
-                                                fontSize: 12)),
-                                      ),
-                                      const SizedBox(width: 5),
-                                      Text('Thổ cư', style: Styles.textOne())
-                                    ],
-                                  ),
-                                  const SizedBox(height: 10),
-                                  Row(
-                                    children: [
-                                      Container(
-                                        decoration: BoxDecoration(
-                                            border: Border.all(
-                                                color: Styles.primaryColor),
-                                            borderRadius: const BorderRadius.all(
-                                                Radius.circular(5))),
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 10, vertical: 2),
-                                        child: const Text('1',
-                                            style: TextStyle(
-                                                color: Styles.primaryColor,
-                                                fontSize: 12)),
-                                      ),
-                                      const SizedBox(width: 5),
-                                      Text('Chung cư', style: Styles.textOne())
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                            const SizedBox(width: 5),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                          border:
-                                          Border.all(color: Styles.greenColor),
-                                          borderRadius: const BorderRadius.all(
-                                              Radius.circular(5))),
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 10, vertical: 2),
-                                      child: const Text('2',
-                                          style: TextStyle(
-                                              color: Styles.greenColor,
-                                              fontSize: 12)),
-                                    ),
-                                    const SizedBox(width: 5),
-                                    Text('Cho thuê', style: Styles.textOne())
-                                  ],
-                                ),
-                                const SizedBox(height: 10),
-                                Row(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                          border:
-                                          Border.all(color: Styles.blueColor),
-                                          borderRadius: const BorderRadius.all(
-                                              Radius.circular(5))),
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 10, vertical: 2),
-                                      child: const Text('3',
-                                          style: TextStyle(
-                                              color: Styles.blueColor,
-                                              fontSize: 12)),
-                                    ),
-                                    const SizedBox(width: 5),
-                                    Text('Dự án', style: Styles.textOne())
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        const SizedBox(height: 30),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            SizedBox(
-                              width: MediaQuery.of(context).size.width / 3,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Row(
-                                    children: [
-                                      Container(
-                                        decoration: const BoxDecoration(
-                                            color: Styles.greenColor,
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(5))),
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 10, vertical: 2),
-                                        child: const Text('1',
-                                            style: TextStyle(
-                                                fontSize: 12, color: Colors.white)),
-                                      ),
-                                      const SizedBox(width: 5),
-                                      Text('Trống', style: Styles.textOne())
-                                    ],
-                                  ),
-                                  const SizedBox(height: 10),
-                                  Row(
-                                    children: [
-                                      Container(
-                                        decoration: const BoxDecoration(
+                                  Container(
+                                    decoration: BoxDecoration(
+                                        border: Border.all(
+                                            color: Styles.yellowColor),
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(5))),
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 10, vertical: 2),
+                                    child: const Text('1',
+                                        style: TextStyle(
                                             color: Styles.yellowColor,
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(5))),
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 10, vertical: 2),
-                                        child: const Text('1',
-                                            style: TextStyle(
-                                                color: Colors.white, fontSize: 12)),
-                                      ),
-                                      const SizedBox(width: 5),
-                                      Text('Thương lượng', style: Styles.textOne())
-                                    ],
+                                            fontSize: 12)),
                                   ),
+                                  const SizedBox(width: 5),
+                                  Text('Thổ cư', style: Styles.textOne())
                                 ],
                               ),
-                            ),
-                            const SizedBox(width: 5),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                              const SizedBox(height: 10),
+                              Row(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                        border: Border.all(
+                                            color: Styles.primaryColor),
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(5))),
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 10, vertical: 2),
+                                    child: const Text('1',
+                                        style: TextStyle(
+                                            color: Styles.primaryColor,
+                                            fontSize: 12)),
+                                  ),
+                                  const SizedBox(width: 5),
+                                  Text('Chung cư', style: Styles.textOne())
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(width: 5),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
                               children: [
-                                Row(
-                                  children: [
-                                    Container(
-                                      decoration: const BoxDecoration(
-                                          color: Styles.primaryColor,
-                                          borderRadius:
-                                          BorderRadius.all(Radius.circular(5))),
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 10, vertical: 2),
-                                      child: const Text('2',
-                                          style: TextStyle(
-                                              color: Colors.white, fontSize: 12)),
-                                    ),
-                                    const SizedBox(width: 5),
-                                    Text('Đặt cọc', style: Styles.textOne())
-                                  ],
+                                Container(
+                                  decoration: BoxDecoration(
+                                      border:
+                                          Border.all(color: Styles.greenColor),
+                                      borderRadius: const BorderRadius.all(
+                                          Radius.circular(5))),
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 10, vertical: 2),
+                                  child: const Text('2',
+                                      style: TextStyle(
+                                          color: Styles.greenColor,
+                                          fontSize: 12)),
                                 ),
-                                const SizedBox(height: 10),
-                                Row(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                          border: Border.all(
-                                              color: Styles.primaryColor),
-                                          borderRadius: const BorderRadius.all(
-                                              Radius.circular(5))),
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 10, vertical: 2),
-                                      child: const Text('3',
-                                          style: TextStyle(
-                                              color: Styles.primaryColor,
-                                              fontSize: 12)),
-                                    ),
-                                    const SizedBox(width: 5),
-                                    Text('Đóng', style: Styles.textOne())
-                                  ],
+                                const SizedBox(width: 5),
+                                Text('Cho thuê', style: Styles.textOne())
+                              ],
+                            ),
+                            const SizedBox(height: 10),
+                            Row(
+                              children: [
+                                Container(
+                                  decoration: BoxDecoration(
+                                      border:
+                                          Border.all(color: Styles.blueColor),
+                                      borderRadius: const BorderRadius.all(
+                                          Radius.circular(5))),
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 10, vertical: 2),
+                                  child: const Text('3',
+                                      style: TextStyle(
+                                          color: Styles.blueColor,
+                                          fontSize: 12)),
                                 ),
+                                const SizedBox(width: 5),
+                                Text('Dự án', style: Styles.textOne())
                               ],
                             ),
                           ],
                         ),
                       ],
                     ),
-                  )
-                ],
-              )),
+                    const SizedBox(height: 30),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width / 3,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    decoration: const BoxDecoration(
+                                        color: Styles.greenColor,
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(5))),
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 10, vertical: 2),
+                                    child: const Text('1',
+                                        style: TextStyle(
+                                            fontSize: 12, color: Colors.white)),
+                                  ),
+                                  const SizedBox(width: 5),
+                                  Text('Trống', style: Styles.textOne())
+                                ],
+                              ),
+                              const SizedBox(height: 10),
+                              Row(
+                                children: [
+                                  Container(
+                                    decoration: const BoxDecoration(
+                                        color: Styles.yellowColor,
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(5))),
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 10, vertical: 2),
+                                    child: const Text('1',
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 12)),
+                                  ),
+                                  const SizedBox(width: 5),
+                                  Text('Thương lượng', style: Styles.textOne())
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(width: 5),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                Container(
+                                  decoration: const BoxDecoration(
+                                      color: Styles.primaryColor,
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(5))),
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 10, vertical: 2),
+                                  child: const Text('2',
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 12)),
+                                ),
+                                const SizedBox(width: 5),
+                                Text('Đặt cọc', style: Styles.textOne())
+                              ],
+                            ),
+                            const SizedBox(height: 10),
+                            Row(
+                              children: [
+                                Container(
+                                  decoration: BoxDecoration(
+                                      border: Border.all(
+                                          color: Styles.primaryColor),
+                                      borderRadius: const BorderRadius.all(
+                                          Radius.circular(5))),
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 10, vertical: 2),
+                                  child: const Text('3',
+                                      style: TextStyle(
+                                          color: Styles.primaryColor,
+                                          fontSize: 12)),
+                                ),
+                                const SizedBox(width: 5),
+                                Text('Đóng', style: Styles.textOne())
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              )
+            ],
+          )),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              MyButton(text: "Thổ cử"),
-              MyButtonOutline(text: "Chung cư"),
-              MyButtonOutline(text: "Cho thuê"),
-              MyButtonOutline(text: "Dự án"),
+              MyButton(
+                  text: "Thổ cử", width: MediaQuery.of(context).size.width / 5),
+              MyButtonOutline(
+                  text: "Chung cư",
+                  width: MediaQuery.of(context).size.width / 5),
+              MyButtonOutline(
+                  text: "Cho thuê",
+                  width: MediaQuery.of(context).size.width / 5),
+              MyButtonOutline(
+                  text: "Dự án", width: MediaQuery.of(context).size.width / 5),
             ],
           ),
           Column(
@@ -489,16 +498,25 @@ class GroupDetailPage extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-                width: 250,
-                height: 50,
-                child: DropdownDatePicker(
+                width: 320,
+                height: 30,
+                child: MyDropdownDatePicker(
+                  textStyle: TextStyle(fontSize: 14),
                   inputDecoration: InputDecoration(
                     contentPadding: EdgeInsets.only(top: 0, bottom: 0),
                     enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.grey, width: 1.0),
+                      borderSide:
+                          BorderSide(color: Styles.yellowColor, width: 1.0),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide:
+                          BorderSide(color: Styles.yellowColor, width: 1.0),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     border: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: Styles.yellowColor, width: 1.0),
                         borderRadius: BorderRadius.circular(10)),
                   ),
                   isDropdownHideUnderline: true,
@@ -513,6 +531,7 @@ class GroupDetailPage extends StatelessWidget {
                   onChangedMonth: (value) => print('onChangedMonth: $value'),
                   onChangedYear: (value) => print('onChangedYear: $value'),
                   showDay: false,
+                  locale: 'vi_VN',
                 )),
             const SizedBox(height: 30),
             Padding(

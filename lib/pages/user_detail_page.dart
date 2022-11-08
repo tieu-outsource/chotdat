@@ -2,10 +2,10 @@ import 'package:chotdat/widgets/my_button.dart';
 import 'package:chotdat/widgets/my_button_outline.dart';
 import 'package:chotdat/widgets/named_card.dart';
 import 'package:chotdat/widgets/search_bar.dart';
-import 'package:datepicker_dropdown/datepicker_dropdown.dart';
 import 'package:flutter/material.dart';
 
 import '../color.dart';
+import '../widgets/my_datepicker.dart';
 import '../widgets/sale_item.dart';
 
 class UserDetailPage extends StatelessWidget {
@@ -37,7 +37,7 @@ class UserDetailPage extends StatelessWidget {
             children: [
               MyButton(text: 'Thống kê'),
               Padding(
-                padding: const EdgeInsets.only(right: 10),
+                padding: const EdgeInsets.only(right: 0),
                 child: SizedBox(
                   height: 33,
                   width: 33,
@@ -48,8 +48,10 @@ class UserDetailPage extends StatelessWidget {
               ),
             ],
           ),
+          const SizedBox(height: 10),
           IntrinsicHeight(
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Padding(
                 padding: const EdgeInsets.only(
@@ -270,12 +272,12 @@ class UserDetailPage extends StatelessWidget {
             ],
           )),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              MyButton(text: "Thổ cử"),
-              MyButtonOutline(text: "Chung cư"),
-              MyButtonOutline(text: "Cho thuê"),
-              MyButtonOutline(text: "Dự án"),
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+              MyButton(text: "Thổ cử", width: MediaQuery.of(context).size.width / 5),
+              MyButtonOutline(text: "Chung cư", width: MediaQuery.of(context).size.width / 5),
+              MyButtonOutline(text: "Cho thuê", width: MediaQuery.of(context).size.width / 5),
+              MyButtonOutline(text: "Dự án", width: MediaQuery.of(context).size.width / 5),
             ],
           ),
           Column(
@@ -298,16 +300,22 @@ class UserDetailPage extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-                width: 250,
-                height: 50,
-                child: DropdownDatePicker(
+                width: 350,
+                height: 30,
+                child: MyDropdownDatePicker(
+                  textStyle: TextStyle(fontSize: 14),
                   inputDecoration: InputDecoration(
                     contentPadding: EdgeInsets.only(top: 0, bottom: 0),
                     enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.grey, width: 1.0),
+                      borderSide: BorderSide(color: Styles.yellowColor, width: 1.0),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Styles.yellowColor, width: 1.0),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     border: OutlineInputBorder(
+                        borderSide: BorderSide(color: Styles.yellowColor, width: 1.0),
                         borderRadius: BorderRadius.circular(10)),
                   ),
                   isDropdownHideUnderline: true,
@@ -322,6 +330,7 @@ class UserDetailPage extends StatelessWidget {
                   onChangedMonth: (value) => print('onChangedMonth: $value'),
                   onChangedYear: (value) => print('onChangedYear: $value'),
                   showDay: false,
+                  locale: 'vi_VN',
                 )),
             const SizedBox(height: 30),
             Padding(

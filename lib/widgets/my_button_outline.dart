@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 
 class MyButtonOutline extends StatelessWidget {
   String text = "";
+  double? width;
 
-  MyButtonOutline({super.key, required this.text});
+  MyButtonOutline({super.key, required this.text, this.width});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,8 @@ class MyButtonOutline extends StatelessWidget {
         print("Press");
       },
       child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+          padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 5),
+          width: width,
           decoration: BoxDecoration(
               borderRadius: const BorderRadius.all(Radius.circular(10)),
               border: Border.all(color: Styles.primaryColor),
@@ -26,6 +28,7 @@ class MyButtonOutline extends StatelessWidget {
               ]),
           child: Text(
             text,
+            textAlign: TextAlign.center,
             style: const TextStyle(
                 color: Color(0xff8e8e8e), fontSize: 14, fontWeight: FontWeight.bold),
           )),
