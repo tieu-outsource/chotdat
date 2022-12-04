@@ -76,6 +76,7 @@ class RootPage extends StatelessWidget {
   }
 
   Widget buildBottomNavigationBar(BuildContext context, TabsRouter tabsRouter) {
+    const iconWidth = 60.0;
     return BottomAppBar(
         shape: const CircularNotchedRectangle(),
         notchMargin: 5,
@@ -86,48 +87,60 @@ class RootPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    MaterialButton(
-                      shape: const CircleBorder(),
-                      onPressed: () => tabsRouter.setActiveIndex(0),
-                      color: tabsRouter.activeIndex == 0 ? Colors.white : null,
-                      textColor: tabsRouter.activeIndex == 0
-                          ? Styles.primaryColor
-                          : Colors.white,
-                      child: const Icon(Icons.home),
+                    SizedBox(
+                      width: iconWidth,
+                      child: MaterialButton(
+                        shape: const CircleBorder(),
+                        onPressed: () => tabsRouter.setActiveIndex(0),
+                        color: tabsRouter.activeIndex == 0 ? Colors.white : null,
+                        textColor: tabsRouter.activeIndex == 0
+                            ? Styles.primaryColor
+                            : Colors.white,
+                        child: const Icon(Icons.home),
+                      ),
                     ),
-                    MaterialButton(
-                      shape: const CircleBorder(),
-                      onPressed: () => tabsRouter.setActiveIndex(1),
-                      color: tabsRouter.activeIndex == 1 ? Colors.white : null,
-                      textColor: tabsRouter.activeIndex == 1
-                          ? Styles.primaryColor
-                          : Colors.white,
-                      child: const Icon(Icons.message),
-                    )
+                    SizedBox(
+                      width: iconWidth,
+                      child: MaterialButton(
+                        shape: const CircleBorder(),
+                        onPressed: () => tabsRouter.setActiveIndex(1),
+                        color: tabsRouter.activeIndex == 1 ? Colors.white : null,
+                        textColor: tabsRouter.activeIndex == 1
+                            ? Styles.primaryColor
+                            : Colors.white,
+                        child: const Icon(Icons.message),
+                      ),
+                    ),
                   ],
                 ),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    MaterialButton(
-                      shape: const CircleBorder(),
-                      onPressed: () => tabsRouter.setActiveIndex(2),
-                      color: tabsRouter.activeIndex == 2 ? Colors.white : null,
-                      textColor: tabsRouter.activeIndex == 2
-                          ? Styles.primaryColor
-                          : Colors.white,
-                      child: const Icon(Icons.notifications),
+                    SizedBox(
+                      width: iconWidth,
+                      child: MaterialButton(
+                        shape: const CircleBorder(),
+                        onPressed: () => tabsRouter.setActiveIndex(2),
+                        color: tabsRouter.activeIndex == 2 ? Colors.white : null,
+                        textColor: tabsRouter.activeIndex == 2
+                            ? Styles.primaryColor
+                            : Colors.white,
+                        child: const Icon(Icons.notifications),
+                      ),
                     ),
-                    MaterialButton(
-                      shape: const CircleBorder(),
-                      onPressed: () => tabsRouter.setActiveIndex(3),
-                      color: tabsRouter.activeIndex == 3 ? Colors.white : null,
-                      textColor: tabsRouter.activeIndex == 3
-                          ? Styles.primaryColor
-                          : Colors.white,
-                      child: const Icon(Icons.person),
+                    SizedBox(
+                      width: iconWidth,
+                      child: MaterialButton(
+                        shape: const CircleBorder(),
+                        onPressed: () => tabsRouter.setActiveIndex(3),
+                        color: tabsRouter.activeIndex == 3 ? Colors.white : null,
+                        textColor: tabsRouter.activeIndex == 3
+                            ? Styles.primaryColor
+                            : Colors.white,
+                        child: const Icon(Icons.person),
+                      ),
                     )
                   ],
                 )
@@ -177,7 +190,7 @@ class RootPage extends StatelessWidget {
         }
       default:
         {
-          return Image.asset('images/logo.png');
+          return Image.asset('images/logo.png', width: 171, height: 34);
         }
     }
   }
