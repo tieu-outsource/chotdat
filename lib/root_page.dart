@@ -141,7 +141,7 @@ class RootPage extends StatelessWidget {
       case 'sale-detail':
       case 'time-table':
       case 'compare-price':
-        return Image.asset('images/logo.png');
+        return Image.asset('images/logo.png', width: 171, height: 34);
       case 'user-detail':
         return const Text(
           'Đỗ Bảo Lâm Anh',
