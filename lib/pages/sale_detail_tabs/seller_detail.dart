@@ -23,8 +23,8 @@ class SellerDetailTab extends StatelessWidget {
                     detailItem(context, 'Số điện thoại', '0399803834'),
                     detailItem(
                         context, 'Giá chào bán', '8 tỷ - 130.000.000 m2'),
-                    detailItem(context, 'Hoa hồng bán', '2%'),
-                    detailItem(context, 'Hoa hồng gửi giá mua giới', '50%'),
+                    detailItem(context, 'Hoa hồng bán', '2% - 160.000.000 đ'),
+                    detailItem(context, 'Ghi chú', '50%'),
                   ],
                 ),
               )),
@@ -38,9 +38,9 @@ class SellerDetailTab extends StatelessWidget {
                   children: [
                     detailItem(context, 'Tên môi giới', 'Nguyễn Văn A'),
                     detailItem(context, 'Số điện thoại', '0399803834'),
-                    detailItem(context, 'Hoa hồng', '1%'),
+                    detailItem(context, 'Hoa hồng', '1% - 80.000.000 đ'),
                     detailItem(
-                        context, 'Gửi giá', '200 triệu - 130.000.000 m2'),
+                        context, 'Gửi giá', '200.000.000 đ - 130.000.000 m2'),
                     detailItem(context, 'Giá chào khách', '8,2 tỷ')
                   ],
                 ),
@@ -57,7 +57,7 @@ class SellerDetailTab extends StatelessWidget {
                     detailItem(context, 'Số điện thoại', '0399803834'),
                     detailItem(context, 'Hoa hồng', '1%'),
                     detailItem(
-                        context, 'Gửi giá', '200 triệu - 130.000.000 m2'),
+                        context, 'Gửi giá', '200.000.000 đ - 130.000.000 m2'),
                     detailItem(context, 'Giá chào khách', '8,2 tỷ')
                   ],
                 ),
@@ -88,7 +88,7 @@ class SellerDetailTab extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 30)
+          SizedBox(height: 50)
         ],
       ),
     );

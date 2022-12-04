@@ -28,15 +28,12 @@ class SaleItemDetailTab extends StatelessWidget {
                 width: double.infinity,
                 child: Row(
                   children: [
-                ImageIcon(
-                  const AssetImage(
-                      'images/icons/item_label/road.png'),
-                ),
-                  SizedBox(width: 5),
-                  SizedBox(
-                    width: MediaQuery.of(context)
-                          .size
-                          .width - 90,
+                    const ImageIcon(
+                      AssetImage('images/icons/map.png'),
+                    ),
+                    const SizedBox(width: 5),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width - 90,
                       child: const Text(
                         'Số 1 Đỗ Quanh, Phường Trung Hoà, Quận Cầu Giấy, Hà Nội',
                         maxLines: 5,
@@ -108,7 +105,7 @@ class SaleItemDetailTab extends StatelessWidget {
                   ],
                 ),
               )),
-          // SizedBox(height: 300)
+          SizedBox(height: 60)
         ],
       ),
     );
