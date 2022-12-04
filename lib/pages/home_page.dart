@@ -31,6 +31,7 @@ class HomePage extends StatelessWidget {
   }
 
   Widget buildStorage(BuildContext context) {
+    double iconSize = MediaQuery.of(context).size.width / 10;
     return NamedCard(
       title: "Kho hàng",
       badge: "10",
@@ -42,10 +43,10 @@ class HomePage extends StatelessWidget {
               context.navigateTo(const UserDetailRoute());
             },
             child: Column(
-              children: const [
+              children: [
                 CircleAvatar(
-                  backgroundImage: AssetImage('images/me.png'),
-                  radius: 40,
+                  backgroundImage: const AssetImage('images/me.png'),
+                  radius: iconSize,
                 ),
                 Padding(padding: EdgeInsets.only(top: 10)),
                 Text('Của tôi')
@@ -61,9 +62,9 @@ class HomePage extends StatelessWidget {
                       style: GoogleFonts.ubuntu(
                           fontSize: 16, color: Colors.white)),
                   position: BadgePosition.topEnd(end: 4),
-                  child: const CircleAvatar(
-                    backgroundImage: AssetImage('images/group.png'),
-                    radius: 40,
+                  child: CircleAvatar(
+                    backgroundImage: const AssetImage('images/group.png'),
+                    radius: iconSize,
                   ),
                 ),
                 const Padding(padding: EdgeInsets.only(top: 10)),
@@ -80,9 +81,9 @@ class HomePage extends StatelessWidget {
                       style: GoogleFonts.ubuntu(
                           fontSize: 16, color: Colors.white)),
                   position: BadgePosition.topEnd(end: 4),
-                  child: const CircleAvatar(
-                    backgroundImage: AssetImage('images/group.png'),
-                    radius: 40,
+                  child: CircleAvatar(
+                    backgroundImage: const AssetImage('images/group.png'),
+                    radius: iconSize,
                   ),
                 ),
                 const Padding(padding: EdgeInsets.only(top: 10)),
@@ -99,9 +100,9 @@ class HomePage extends StatelessWidget {
                       style: GoogleFonts.ubuntu(
                           fontSize: 16, color: Colors.white)),
                   position: BadgePosition.topEnd(end: 4),
-                  child: const CircleAvatar(
-                    backgroundImage: AssetImage('images/group.png'),
-                    radius: 40,
+                  child: CircleAvatar(
+                    backgroundImage: const AssetImage('images/group.png'),
+                    radius: iconSize,
                   ),
                 ),
                 const Padding(padding: EdgeInsets.only(top: 10)),
@@ -115,6 +116,7 @@ class HomePage extends StatelessWidget {
   }
 
   Widget buildTools(BuildContext context) {
+    double iconSize = MediaQuery.of(context).size.width / 5;
     return NamedCard(
       title: "Công cụ hỗ trợ",
       badge: "6",
@@ -128,8 +130,8 @@ class HomePage extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  width: 80,
-                  height: 80,
+                  width: iconSize,
+                  height: iconSize,
                   decoration: const BoxDecoration(
                       shape: BoxShape.circle, color: Styles.violetColor),
                   child: Image.asset('images/growth.png'),
@@ -142,8 +144,8 @@ class HomePage extends StatelessWidget {
           Column(
             children: [
               Container(
-                width: 80,
-                height: 80,
+                width: iconSize,
+                height: iconSize,
                 decoration: const BoxDecoration(
                     shape: BoxShape.circle, color: Styles.violetColor),
                 child: Image.asset('images/treasure-map.png'),
@@ -159,8 +161,8 @@ class HomePage extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  width: 80,
-                  height: 80,
+                  width: iconSize,
+                  height: iconSize,
                   decoration: const BoxDecoration(
                       shape: BoxShape.circle, color: Styles.violetColor),
                   child: Image.asset('images/auction.png'),
@@ -173,8 +175,8 @@ class HomePage extends StatelessWidget {
           Column(
             children: [
               Container(
-                width: 80,
-                height: 80,
+                width: iconSize,
+                height: iconSize,
                 decoration: const BoxDecoration(
                     shape: BoxShape.circle, color: Styles.violetColor),
                 child: Image.asset('images/house.png'),
