@@ -76,7 +76,7 @@ class RootPage extends StatelessWidget {
   }
 
   Widget buildBottomNavigationBar(BuildContext context, TabsRouter tabsRouter) {
-    const iconWidth = 60.0;
+    double iconWidth = MediaQuery.of(context).size.width / 5;
     return BottomAppBar(
         shape: const CircularNotchedRectangle(),
         notchMargin: 5,

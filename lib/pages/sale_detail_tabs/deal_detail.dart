@@ -2,8 +2,8 @@ import 'package:chotdat/color.dart';
 import 'package:chotdat/widgets/named_card.dart';
 import 'package:flutter/material.dart';
 
-class SellerDetailTab extends StatelessWidget {
-  const SellerDetailTab({Key? key}) : super(key: key);
+class DealDetailTab extends StatelessWidget {
+  const DealDetailTab({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,61 +12,60 @@ class SellerDetailTab extends StatelessWidget {
       child: ListView(
         children: [
           NamedCard(
-              title: 'Thông tin chủ sở hữu',
+              title: 'Thương lượng chủ sở hữu',
+              titleWidth: 210,
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 5),
                 width: double.infinity,
                 child: Column(
                   children: [
                     detailItem(context, 'Tên chủ sở hữu', 'Nguyễn Văn A'),
-                    detailItem(context, 'Địa chỉ', '60 Nguyễn Văn Lộc'),
-                    detailItem(context, 'Số điện thoại', '0399803834'),
-                    detailItem(context, 'Ghi chú', '50%'),
+                    detailItem(context, 'Gía chủ chào bán', '4,2 tỷ'),
+                    detailItem(context, 'Hoa hồng chủ trả môi giới', '8% - 160.000.000 đ'),
+                    detailItem(context, 'Giá bán chủ chốt', '4,6 tỷ'),
+                    detailItem(context, 'Hoa hồng chủ chốt', '8% - 160.000.000 đ'),
                   ],
                 ),
               )),
           NamedCard(
-              title: 'Thông tin môi giới đầu chủ',
+              title: 'Thương lượng môi giới đầu chủ',
+              titleWidth: 240,
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 5),
+                width: double.infinity,
+                child: Column(
+                  children: [
+                    detailItem(context, 'Tên môi giới', 'Nguyễn Văn B'),
+                    detailItem(context, 'Gửi giá bán', '4,6 tỷ'),
+                    detailItem(context, 'Hoa hồng được hưởng', '8% - 160.000.000 đ'),
+                  ],
+                ),
+              )),
+          NamedCard(
+              title: 'Thương lượng môi giới đầu khách',
+              titleWidth: 260,
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 5),
+                width: double.infinity,
+                child: Column(
+                  children: [
+                    detailItem(context, 'Tên môi giới', 'Nguyễn Văn C'),
+                    detailItem(context, 'Gửi giá bán', '4,6 tỷ'),
+                    detailItem(context, 'Hoa hồng được hưởng', '8% - 160.000.000 đ'),
+                  ],
+                ),
+              )),
+          NamedCard(
+              title: 'Thương lượng khách mua',
               titleWidth: 220,
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 5),
                 width: double.infinity,
                 child: Column(
                   children: [
-                    detailItem(context, 'Tên môi giới', 'Nguyễn Văn A'),
-                    detailItem(context, 'Địa chỉ', '90 Nguyễn Văn Lộc'),
-                    detailItem(context, 'Số điện thoại', '0399803834'),
-                    detailItem(context, 'Ghi chú', 'Abc def'),
-                  ],
-                ),
-              )),
-          NamedCard(
-              title: 'Thông tin môi giới đầu khách',
-              titleWidth: 220,
-              child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 5),
-                width: double.infinity,
-                child: Column(
-                  children: [
-                    detailItem(context, 'Tên môi giới', 'Nguyễn Văn A'),
-                    detailItem(context, 'Địa chỉ', '90 Nguyễn Văn Lộc'),
-                    detailItem(context, 'Số điện thoại', '0399803834'),
-                    detailItem(context, 'Ghi chú', '50%'),
-                  ],
-                ),
-              )),
-          NamedCard(
-              title: 'Thông tin khách mua',
-              titleWidth: 220,
-              child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 5),
-                width: double.infinity,
-                child: Column(
-                  children: [
-                    detailItem(context, 'Tên môi giới', 'Nguyễn Văn D'),
-                    detailItem(context, 'Địa chỉ', '90 Nguyễn Văn Lộc'),
-                    detailItem(context, 'Số điện thoại', '0399803834'),
-                    detailItem(context, 'Ghi chú', '50%'),
+                    detailItem(context, 'Tên khách mua', 'Nguyễn Văn D'),
+                    detailItem(context, 'Giá mua đề nghị', '4,5 tỷ'),
+                    detailItem(context, 'Ghi chú', 'Khách mua có nhu cầu mua ngay'),
                   ],
                 ),
               )),

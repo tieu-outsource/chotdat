@@ -1,6 +1,8 @@
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:chotdat/color.dart';
+import 'package:chotdat/pages/sale_detail_tabs/deal_detail.dart';
 import 'package:chotdat/pages/sale_detail_tabs/item_detail.dart';
+import 'package:chotdat/pages/sale_detail_tabs/permission_detail.dart';
 import 'package:chotdat/pages/sale_detail_tabs/seller_detail.dart';
 import 'package:flutter/material.dart';
 
@@ -56,8 +58,8 @@ class SaleDetailPage extends StatelessWidget {
                   children: [
                     SaleItemDetailTab(),
                     SellerDetailTab(),
-                    SellerDetailTab(),
-                    SellerDetailTab(),
+                    DealDetailTab(),
+                    PermissionDetailTab(),
                   ],
                 ),
               ),
