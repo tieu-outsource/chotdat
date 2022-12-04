@@ -31,7 +31,7 @@ class PlanItem extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.black, fontWeight: FontWeight.bold)),
                   SizedBox(height: 10),
-                  Text("25/05/2002",
+                  Text("13:20 25/05/2002",
                       style: TextStyle(
                           color: Colors.black, fontWeight: FontWeight.bold)),
                 ],
