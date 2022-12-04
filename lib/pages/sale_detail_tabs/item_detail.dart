@@ -28,10 +28,13 @@ class SaleItemDetailTab extends StatelessWidget {
                 width: double.infinity,
                 child: Row(
                   children: [
-                    CircleAvatar(radius: 10),
-                    SizedBox(width: 5),
-                    SizedBox(
-                      width: MediaQuery.of(context)
+                ImageIcon(
+                  const AssetImage(
+                      'images/icons/item_label/road.png'),
+                ),
+                  SizedBox(width: 5),
+                  SizedBox(
+                    width: MediaQuery.of(context)
                           .size
                           .width - 90,
                       child: const Text(
