@@ -64,37 +64,109 @@ class SaleItem extends StatelessWidget {
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text("Diện tích: 55m2",
-                                        style: GoogleFonts.openSans(
-                                            fontSize: 10, color: Colors.black)),
+                                    Row(
+                                      children: [
+                                        ImageIcon(
+                                          const AssetImage(
+                                              'images/icons/item_label/wide.png'),
+                                          color: color,
+                                          size: 14,
+                                        ),
+                                        const SizedBox(width: 5),
+                                        Text("55m2",
+                                            style: GoogleFonts.openSans(
+                                                fontSize: 10,
+                                                color: Colors.black)),
+                                      ],
+                                    ),
                                     const SizedBox(height: 5),
-                                    Text("Mặt tiền: 8m",
-                                        style: GoogleFonts.openSans(
-                                            fontSize: 10, color: Colors.black)),
+                                    Row(
+                                      children: [
+                                        ImageIcon(
+                                          const AssetImage(
+                                              'images/icons/item_label/width.png'),
+                                          color: color,
+                                          size: 14,
+                                        ),
+                                        const SizedBox(width: 5),
+                                        Text("18m",
+                                            style: GoogleFonts.openSans(
+                                                fontSize: 10,
+                                                color: Colors.black)),
+                                      ],
+                                    ),
                                   ],
                                 ),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text("Xây dựng: 5 tầng",
-                                        style: GoogleFonts.openSans(
-                                            fontSize: 10, color: Colors.black)),
+                                    Row(
+                                      children: [
+                                        ImageIcon(
+                                          const AssetImage(
+                                              'images/icons/item_label/height.png'),
+                                          color: color,
+                                          size: 14,
+                                        ),
+                                        const SizedBox(width: 5),
+                                        Text("5 tầng",
+                                            style: GoogleFonts.openSans(
+                                                fontSize: 10,
+                                                color: Colors.black)),
+                                      ],
+                                    ),
                                     const SizedBox(height: 5),
-                                    Text("Pháp lý: sổ đỏ",
-                                        style: GoogleFonts.openSans(
-                                            fontSize: 10, color: Colors.black)),
+                                    Row(
+                                      children: [
+                                        ImageIcon(
+                                          const AssetImage(
+                                              'images/icons/item_label/document.png'),
+                                          color: color,
+                                          size: 14,
+                                        ),
+                                        const SizedBox(width: 5),
+                                        Text("sổ đỏ",
+                                            style: GoogleFonts.openSans(
+                                                fontSize: 10,
+                                                color: Colors.black)),
+                                      ],
+                                    ),
                                   ],
                                 ),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text("Hướng: Đông Nam",
-                                        style: GoogleFonts.openSans(
-                                            fontSize: 10, color: Colors.black)),
+                                    Row(
+                                      children: [
+                                        ImageIcon(
+                                          const AssetImage(
+                                              'images/icons/item_label/directions.png'),
+                                          color: color,
+                                          size: 14,
+                                        ),
+                                        const SizedBox(width: 5),
+                                        Text("Đông Nam",
+                                            style: GoogleFonts.openSans(
+                                                fontSize: 10,
+                                                color: Colors.black)),
+                                      ],
+                                    ),
                                     const SizedBox(height: 5),
-                                    Text("Kích thước đường: 5m",
-                                        style: GoogleFonts.openSans(
-                                            fontSize: 10, color: Colors.black)),
+                                    Row(
+                                      children: [
+                                        ImageIcon(
+                                          const AssetImage(
+                                              'images/icons/item_label/road.png'),
+                                          color: color,
+                                          size: 14,
+                                        ),
+                                        const SizedBox(width: 5),
+                                        Text("5m",
+                                            style: GoogleFonts.openSans(
+                                                fontSize: 10,
+                                                color: Colors.black)),
+                                      ],
+                                    ),
                                   ],
                                 )
                               ],
@@ -166,7 +238,7 @@ class SaleItem extends StatelessWidget {
                                 ),
                                 GestureDetector(
                                   onTap: () {
-                                    context.navigateTo(SaleDetailRoute());
+                                    context.navigateTo(const SaleDetailRoute());
                                   },
                                   child: Text('Chi tiết  ',
                                       style: GoogleFonts.openSans(
@@ -188,7 +260,7 @@ class SaleItem extends StatelessWidget {
                       padding: const EdgeInsets.only(top: 23),
                       child: GestureDetector(
                         onTap: () {
-                          context.navigateTo(SaleDetailRoute());
+                          context.navigateTo(const SaleDetailRoute());
                         },
                         child: SizedBox(
                           height: 74,
