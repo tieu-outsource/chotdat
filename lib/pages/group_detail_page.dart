@@ -386,16 +386,23 @@ class GroupDetailPage extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              MyButton(
-                  text: "Thổ cử", width: MediaQuery.of(context).size.width / 5),
+              MyButtonOutline(
+                text: "Thổ cử",
+                width: MediaQuery.of(context).size.width / 5,
+                color: Styles.yellowColor,
+              ),
               MyButtonOutline(
                   text: "Chung cư",
-                  width: MediaQuery.of(context).size.width / 5),
+                  width: MediaQuery.of(context).size.width / 5,
+                  color: Styles.primaryColor),
               MyButtonOutline(
                   text: "Cho thuê",
-                  width: MediaQuery.of(context).size.width / 5),
+                  width: MediaQuery.of(context).size.width / 5,
+                  color: Styles.greenColor),
               MyButtonOutline(
-                  text: "Dự án", width: MediaQuery.of(context).size.width / 5),
+                  text: "Dự án",
+                  width: MediaQuery.of(context).size.width / 5,
+                  color: Styles.blueColor),
             ],
           ),
           Column(

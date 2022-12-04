@@ -51,7 +51,7 @@ class UserDetailPage extends StatelessWidget {
           const SizedBox(height: 10),
           IntrinsicHeight(
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Padding(
                 padding: const EdgeInsets.only(
@@ -272,12 +272,25 @@ class UserDetailPage extends StatelessWidget {
             ],
           )),
           Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-              MyButton(text: "Thổ cử", width: MediaQuery.of(context).size.width / 5),
-              MyButtonOutline(text: "Chung cư", width: MediaQuery.of(context).size.width / 5),
-              MyButtonOutline(text: "Cho thuê", width: MediaQuery.of(context).size.width / 5),
-              MyButtonOutline(text: "Dự án", width: MediaQuery.of(context).size.width / 5),
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              MyButtonOutline(
+                text: "Thổ cử",
+                width: MediaQuery.of(context).size.width / 5,
+                color: Styles.yellowColor,
+              ),
+              MyButtonOutline(
+                  text: "Chung cư",
+                  width: MediaQuery.of(context).size.width / 5,
+                  color: Styles.primaryColor),
+              MyButtonOutline(
+                  text: "Cho thuê",
+                  width: MediaQuery.of(context).size.width / 5,
+                  color: Styles.greenColor),
+              MyButtonOutline(
+                  text: "Dự án",
+                  width: MediaQuery.of(context).size.width / 5,
+                  color: Styles.blueColor),
             ],
           ),
           Column(
@@ -307,15 +320,18 @@ class UserDetailPage extends StatelessWidget {
                   inputDecoration: InputDecoration(
                     contentPadding: EdgeInsets.only(top: 0, bottom: 0),
                     enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Styles.yellowColor, width: 1.0),
+                      borderSide:
+                          BorderSide(color: Styles.yellowColor, width: 1.0),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Styles.yellowColor, width: 1.0),
+                      borderSide:
+                          BorderSide(color: Styles.yellowColor, width: 1.0),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     border: OutlineInputBorder(
-                        borderSide: BorderSide(color: Styles.yellowColor, width: 1.0),
+                        borderSide:
+                            BorderSide(color: Styles.yellowColor, width: 1.0),
                         borderRadius: BorderRadius.circular(10)),
                   ),
                   isDropdownHideUnderline: true,
