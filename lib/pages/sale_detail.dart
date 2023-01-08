@@ -20,6 +20,7 @@ class SaleDetailPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 20),
               child: ButtonsTabBar(
+                elevation: 5,
                 backgroundColor: Styles.primaryColor,
                 unselectedBorderColor: Styles.primaryColor,
                 borderWidth: 1,
@@ -37,16 +38,16 @@ class SaleDetailPage extends StatelessWidget {
                     fontSize: 10),
                 tabs: const [
                   Tab(
-                    text: '   Thông tin \nbất động sản',
+                    text: 'Thông tin \nbất động sản',
                   ),
                   Tab(
                     text: "Thông tin \nngười bán",
                   ),
                   Tab(
-                    text: "Thương lượng",
+                    text: "Thông tin \nThương lượng",
                   ),
                   Tab(
-                    text: "Phân quyền",
+                    text: "Thông tin \nPhân quyền",
                   ),
                 ],
               ),

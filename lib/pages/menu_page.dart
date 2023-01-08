@@ -73,6 +73,17 @@ class MenuPage extends StatelessWidget {
     ),
     ListTile(
       contentPadding: EdgeInsets.all(0),
+      leading: ImageIcon(AssetImage('images/icons/refer.png'), size: 20, color: Colors.grey),
+      trailing: Icon(Icons.arrow_forward_ios_sharp),
+      iconColor: Colors.black87,
+      title: Text(
+        "Mã giới thiệu",
+        style: TextStyle(fontSize: 16),
+      ),
+      textColor: Styles.textGrey,
+    ),
+    ListTile(
+      contentPadding: EdgeInsets.all(0),
       leading: ImageIcon(AssetImage('images/icons/logout.png')),
       trailing: Icon(Icons.arrow_forward_ios_sharp),
       iconColor: Colors.black87,

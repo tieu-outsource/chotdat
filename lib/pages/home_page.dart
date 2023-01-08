@@ -42,72 +42,88 @@ class HomePage extends StatelessWidget {
             onTap: () {
               context.navigateTo(const UserDetailRoute());
             },
-            child: Column(
-              children: [
-                CircleAvatar(
-                  backgroundImage: const AssetImage('images/me.png'),
-                  radius: iconSize,
-                ),
-                Padding(padding: EdgeInsets.only(top: 10)),
-                Text('Của tôi')
-              ],
+            child: SizedBox(
+              width: MediaQuery.of(context).size.width / 5,
+              height: 124,
+              child: Column(
+                children: [
+                  CircleAvatar(
+                    backgroundImage: const AssetImage('images/me.png'),
+                    radius: iconSize,
+                  ),
+                  Padding(padding: EdgeInsets.only(top: 10)),
+                  const Text('Của tôi', style: TextStyle(fontSize: 14))
+                ],
+              ),
             ),
           ),
           GestureDetector(
             onTap: () => context.navigateTo(const GroupDetailRoute()),
-            child: Column(
-              children: [
-                Badge(
-                  badgeContent: Text('3',
-                      style: GoogleFonts.ubuntu(
-                          fontSize: 16, color: Colors.white)),
-                  position: BadgePosition.topEnd(end: 4),
-                  child: CircleAvatar(
-                    backgroundImage: const AssetImage('images/group.png'),
-                    radius: iconSize,
+            child: SizedBox(
+              width: MediaQuery.of(context).size.width / 5,
+              height: 124,
+              child: Column(
+                children: [
+                  Badge(
+                    badgeContent: Text('3',
+                        style: GoogleFonts.ubuntu(
+                            fontSize: 16, color: Colors.white)),
+                    position: BadgePosition.topEnd(end: 4),
+                    child: CircleAvatar(
+                      backgroundImage: const AssetImage('images/group.png'),
+                      radius: iconSize,
+                    ),
                   ),
-                ),
-                const Padding(padding: EdgeInsets.only(top: 10)),
-                const Text('Nhóm 1')
-              ],
+                  const Padding(padding: EdgeInsets.only(top: 10)),
+                  const Text('Nhà đất Hà Đông', style: TextStyle(fontSize: 14))
+                ],
+              ),
             ),
           ),
           GestureDetector(
             onTap: () => context.navigateTo(const GroupDetailRoute()),
-            child: Column(
-              children: [
-                Badge(
-                  badgeContent: Text('3',
-                      style: GoogleFonts.ubuntu(
-                          fontSize: 16, color: Colors.white)),
-                  position: BadgePosition.topEnd(end: 4),
-                  child: CircleAvatar(
-                    backgroundImage: const AssetImage('images/group.png'),
-                    radius: iconSize,
+            child: SizedBox(
+              width: MediaQuery.of(context).size.width / 5,
+              height: 124,
+              child: Column(
+                children: [
+                  Badge(
+                    badgeContent: Text('3',
+                        style: GoogleFonts.ubuntu(
+                            fontSize: 16, color: Colors.white)),
+                    position: BadgePosition.topEnd(end: 4),
+                    child: CircleAvatar(
+                      backgroundImage: const AssetImage('images/group.png'),
+                      radius: iconSize,
+                    ),
                   ),
-                ),
-                const Padding(padding: EdgeInsets.only(top: 10)),
-                const Text('Nhóm 2')
-              ],
+                  const Padding(padding: EdgeInsets.only(top: 10)),
+                  const Text('Thiên Khôi', style: TextStyle(fontSize: 14))
+                ],
+              ),
             ),
           ),
           GestureDetector(
             onTap: () => context.navigateTo(const GroupDetailRoute()),
-            child: Column(
-              children: [
-                Badge(
-                  badgeContent: Text('3',
-                      style: GoogleFonts.ubuntu(
-                          fontSize: 16, color: Colors.white)),
-                  position: BadgePosition.topEnd(end: 4),
-                  child: CircleAvatar(
-                    backgroundImage: const AssetImage('images/group.png'),
-                    radius: iconSize,
+            child: SizedBox(
+              width: MediaQuery.of(context).size.width / 5,
+              height: 124,
+              child: Column(
+                children: [
+                  Badge(
+                    badgeContent: Text('3',
+                        style: GoogleFonts.ubuntu(
+                            fontSize: 16, color: Colors.white)),
+                    position: BadgePosition.topEnd(end: 4),
+                    child: CircleAvatar(
+                      backgroundImage: const AssetImage('images/group.png'),
+                      radius: iconSize,
+                    ),
                   ),
-                ),
-                const Padding(padding: EdgeInsets.only(top: 10)),
-                const Text('Nhóm 3')
-              ],
+                  const Padding(padding: EdgeInsets.only(top: 10)),
+                  const Text('Nhà phố 6', style: TextStyle(fontSize: 14))
+                ],
+              ),
             ),
           ),
         ],

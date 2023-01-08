@@ -42,7 +42,7 @@ class GroupDetailPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
-            width: 70,
+            width: MediaQuery.of(context).size.width / 6,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -59,7 +59,7 @@ class GroupDetailPage extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: 70,
+            width: MediaQuery.of(context).size.width / 6,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -77,7 +77,7 @@ class GroupDetailPage extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: 70,
+            width: MediaQuery.of(context).size.width / 6,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -95,7 +95,7 @@ class GroupDetailPage extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: 70,
+            width: MediaQuery.of(context).size.width / 6,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -112,7 +112,7 @@ class GroupDetailPage extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: 70,
+            width: MediaQuery.of(context).size.width / 6,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [

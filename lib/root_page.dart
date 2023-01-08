@@ -179,7 +179,7 @@ class RootPage extends StatelessWidget {
                       style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      'Công khai',
+                      'Công khai - 5 thành viên',
                       style: TextStyle(fontSize: 14),
                     ),
                   ],
