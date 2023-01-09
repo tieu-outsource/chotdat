@@ -20,10 +20,10 @@ class DealDetailTab extends StatelessWidget {
                 child: Column(
                   children: [
                     detailItem(context, 'Tên chủ sở hữu', 'Nguyễn Văn A'),
-                    detailItem(context, 'Gía chủ chào bán', '4,2 tỷ'),
-                    detailItem(context, 'Hoa hồng chủ trả môi giới', '8% - 160.000.000 đ'),
-                    detailItem(context, 'Giá bán chủ chốt', '4,6 tỷ'),
-                    detailItem(context, 'Hoa hồng chủ chốt', '8% - 160.000.000 đ'),
+                    detailItem(context, 'Gía chủ chào bán', '4.200.000.000 đ'),
+                    detailItem(context, 'Hoa hồng chủ trả môi giới', '2% - 82.000.000 đ'),
+                    detailItem(context, 'Giá bán chủ chốt', '4.000.000.000 đ'),
+                    detailItem(context, 'Hoa hồng chủ chốt', '3% - 120.000.000 đ'),
                   ],
                 ),
               )),
@@ -36,8 +36,8 @@ class DealDetailTab extends StatelessWidget {
                 child: Column(
                   children: [
                     detailItem(context, 'Tên môi giới', 'Nguyễn Văn B'),
-                    detailItem(context, 'Gửi giá bán', '4,6 tỷ'),
-                    detailItem(context, 'Hoa hồng được hưởng', '8% - 160.000.000 đ'),
+                    detailItem(context, 'Gửi giá bán', '200.000.000 đ'),
+                    detailItem(context, 'Hoa hồng được hưởng', '2% - 80.000.000 đ'),
                   ],
                 ),
               )),
@@ -50,8 +50,8 @@ class DealDetailTab extends StatelessWidget {
                 child: Column(
                   children: [
                     detailItem(context, 'Tên môi giới', 'Nguyễn Văn C'),
-                    detailItem(context, 'Gửi giá bán', '4,6 tỷ'),
-                    detailItem(context, 'Hoa hồng được hưởng', '8% - 160.000.000 đ'),
+                    detailItem(context, 'Gửi giá bán', '300.000.000 đ'),
+                    detailItem(context, 'Hoa hồng được hưởng', '1% - 40.000.000 đ'),
                   ],
                 ),
               )),
@@ -64,7 +64,8 @@ class DealDetailTab extends StatelessWidget {
                 child: Column(
                   children: [
                     detailItem(context, 'Tên khách mua', 'Nguyễn Văn D'),
-                    detailItem(context, 'Giá mua đề nghị', '4,5 tỷ'),
+                    detailItem(context, 'Giá chào bán tới khách', '4.500.000.000 đ'),
+                    detailItem(context, 'Giá khách trả', '4.300.000.000 đ'),
                     detailItem(context, 'Ghi chú', 'Khách mua có nhu cầu mua ngay'),
                   ],
                 ),

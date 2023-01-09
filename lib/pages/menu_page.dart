@@ -29,17 +29,6 @@ class MenuPage extends StatelessWidget {
     ),
     ListTile(
       contentPadding: EdgeInsets.all(0),
-      leading: ImageIcon(AssetImage('images/icons/closed_group.png')),
-      trailing: Icon(Icons.arrow_forward_ios_sharp),
-      iconColor: Colors.black87,
-      title: Text(
-        "Nhóm đã đóng",
-        style: TextStyle(fontSize: 16),
-      ),
-      textColor: Styles.textGrey,
-    ),
-    ListTile(
-      contentPadding: EdgeInsets.all(0),
       leading: ImageIcon(AssetImage('images/icons/setting.png')),
       trailing: Icon(Icons.arrow_forward_ios_sharp),
       iconColor: Colors.black87,
